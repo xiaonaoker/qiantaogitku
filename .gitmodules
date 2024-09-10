@@ -1,0 +1,9 @@
+[submodule "通用业务/单交易场景手敲目录"]
+	path = 通用业务/单交易场景手敲目录
+	url = https://github.com/xiaonaoker/danjiaoyichangjing.git
+[submodule "通用业务/个人类/手敲目录"]
+	path = 通用业务/个人类/手敲目录
+	url = https://github.com/xiaonaoker/gerenkehu.git
+[submodule "通用业务/个人类/手敲目录2"]
+	path = 通用业务/个人类/手敲目录2
+	url = https://github.com/xiaonaoker/gerenxiaohu.git
