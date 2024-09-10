@@ -1,0 +1,842 @@
+{
+  "name": "PAD授权",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "row",
+              "data": {
+                "label": "行",
+                "width": "100%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "col",
+                  "data": {
+                    "label": "列",
+                    "width": "100%",
+                    "align": "left",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "row",
+                      "data": {
+                        "label": "行",
+                        "width": "100%",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "container",
+                          "component": "col",
+                          "data": {
+                            "label": "列",
+                            "width": "100%",
+                            "align": "left",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": [
+                            {
+                              "type": "widget",
+                              "component": "label",
+                              "data": {
+                                "label": "|授权原因",
+                                "modelData": "",
+                                "fontSize": 13,
+                                "bold": true,
+                                "italic": false,
+                                "underline": false,
+                                "color": "#00B0F0",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {}
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "widget",
+                      "component": "input",
+                      "data": {
+                        "label": "输入框",
+                        "modelData": "",
+                        "inputLimit": "echo",
+                        "showLabel": false,
+                        "labelAlign": "right",
+                        "row": 1,
+                        "placeholder": "",
+                        "max": 0,
+                        "contentType": "text",
+                        "padding": 0,
+                        "margin": 0,
+                        "width": "100%",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {
+                        "初始化": [
+                          {
+                            "name": "根据“授权控制规则”回显授权条件。",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "|授权要点",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#00B0F0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "输入框",
+        "modelData": "",
+        "inputLimit": "echo",
+        "showLabel": false,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": 0,
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "根据“授权控制规则”回显授权要点。",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "|业务要素",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#00B0F0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "right",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "业务要素",
+                    "modelData": "",
+                    "fontSize": 16,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、根据具体交易上送的业务要素内容，以标签：值（key-value）方式展示对应内容；\r\n2、如果业务要素栏位为重点要素域（可配置），则高亮红色显示；\r\n3、如果指定的业务要素栏位（可配置）值发生变化，可显示变化前和变化后的值。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "|授权影像（左右滑动可查看影像）",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#00B0F0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、通过影像批次号获取影像图像并展示；\r\n2、可通过左右滑动查看全部影像图片。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "right",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "刷新",
+                "modelData": "",
+                "type": "primary",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": "使用刷新图标展示，不是文字展示。"
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "该按钮一直处于可操作状态；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "点击后": [
+                  {
+                    "name": "点击该按钮，通过影像批次号重新查询影像图像，并刷新授权影像展示内容。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "image",
+                  "data": {
+                    "label": "图片",
+                    "src": "",
+                    "alt": "",
+                    "width": 180,
+                    "height": 100,
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "row",
+              "data": {
+                "label": "行",
+                "width": "100%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "col",
+                  "data": {
+                    "label": "列",
+                    "width": "20%",
+                    "align": "left",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "widget",
+                      "component": "label",
+                      "data": {
+                        "label": "不通过原因",
+                        "modelData": "",
+                        "fontSize": 13,
+                        "bold": true,
+                        "italic": false,
+                        "underline": false,
+                        "color": "#000000",
+                        "padding": 0,
+                        "margin": 0,
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "col",
+                  "data": {
+                    "label": "列",
+                    "width": "80%",
+                    "align": "left",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "widget",
+                      "component": "select",
+                      "data": {
+                        "label": "下拉框",
+                        "modelData": "",
+                        "inputLimit": "",
+                        "showLabel": false,
+                        "labelAlign": "right",
+                        "placeholder": "",
+                        "options": [
+                          {
+                            "label": "00-客户凭证有误",
+                            "value": ""
+                          },
+                          {
+                            "label": "01-交易信息录入有误"
+                          },
+                          {
+                            "label": "02-未通过身份联网核查"
+                          },
+                          {
+                            "label": "03-单证重复"
+                          },
+                          {
+                            "label": "04-账户余额不足"
+                          },
+                          {
+                            "label": "05-未进行大额查证或无客户经理签字"
+                          },
+                          {
+                            "label": "06-其他"
+                          }
+                        ],
+                        "padding": 0,
+                        "margin": 0,
+                        "width": "80%",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {
+                        "初始化": [
+                          {
+                            "name": "初始为空；",
+                            "type": "自定义规则"
+                          }
+                        ],
+                        "选项变化": [
+                          {
+                            "name": "1、选择“06-其他”时，“不通过原因-其他”域置为可编辑、必输；\r\n2、选择“00/01/02/03/04/05”时，“不通过原因-其他”清空并置灰。",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "20%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "80%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "input",
+              "data": {
+                "label": "输入框",
+                "modelData": "",
+                "inputLimit": "",
+                "showLabel": false,
+                "labelAlign": "right",
+                "row": 1,
+                "placeholder": "",
+                "max": 0,
+                "contentType": "text",
+                "padding": 0,
+                "margin": 0,
+                "width": "80%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "当“不通过原因”选择“06-其他”时，该域必输；否则该域置空置灰。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "通过",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一致处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，返回授权结果给柜面系统。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "不通过",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一致处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "1、判断“不通过原因”是否为空，如果为空，则提示008（信息提示框，错误，按钮【确定】，“请选择不通过原因！”，选择【确定】，关闭提示，焦点落在“不通过原因”域。）；\r\n2、如果“不通过原因”为“06-其他”，则判断“不通过原因-其他”域是否为空，如果为空，则提示009（信息提示框，错误，按钮【确定】，“请录入不通过具体原因！”，选择【确定】，关闭提示，焦点落在“不通过原因-其他”域。）；\r\n3、否则，返回授权结果和不通过原因给柜面系统（如果不通过原因-其他不为空，则将”不通过原因“+”不通过原因-其他“一起返回柜面系统）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "1、当pad授权返回授权结果后，系统提示授权结果，并更新授权登记簿；\r\n2、如果授权不通过，由系统自动更新授权登记表并提示006（信息提示框，提示，按钮【确定】，“授权不通过，不通过原因：XXXX！”，选择【确定】，关闭提示，返回交易界面。）（XXXX为授权结果中的不通过原因）；\r\n3、如果授权通过，则系统自动更新授权登记表并提示007（信息提示框，提示，按钮【确定】，“授权通过！”，选择【确定】，关闭提示，交易继续。）。",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

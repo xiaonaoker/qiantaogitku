@@ -1,0 +1,214 @@
+{
+  "node": [
+    {
+      "id": 7,
+      "type": "logic",
+      "name": "处理外汇信息",
+      "rules": [],
+      "formRules": {}
+    },
+    {
+      "id": 1,
+      "type": "page",
+      "name": "选择开户种类",
+      "pageType": "fragment"
+    },
+    {
+      "id": 0,
+      "type": "start",
+      "name": "开始"
+    },
+    {
+      "id": -1,
+      "type": "end",
+      "name": "结束"
+    },
+    {
+      "id": 2,
+      "type": "page",
+      "name": "录入基本信息",
+      "pageType": "page"
+    },
+    {
+      "id": 3,
+      "type": "page",
+      "name": "录入产品信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 4,
+      "type": "page",
+      "name": "录入交易信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 5,
+      "type": "page",
+      "name": "存款设置",
+      "pageType": "fragment"
+    },
+    {
+      "id": 6,
+      "type": "page",
+      "name": "展示外汇信息",
+      "pageType": "fragment"
+    }
+  ],
+  "edge": [
+    {
+      "source": 0,
+      "target": 1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 2,
+      "target": -1,
+      "condition": "开户种类 = 电子账户",
+      "conditionTree": "[{\"l\":\"开户种类\",\"m\":\"=\",\"r\":\"电子账户\"}]"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "condition": "开户种类 = 定期一本通存折 || 开户种类 = 储蓄定期存单",
+      "conditionTree": "[{\"l\":\"开户种类\",\"m\":\"=\",\"r\":\"定期一本通存折\"},\"||\",{\"l\":\"开户种类\",\"m\":\"=\",\"r\":\"储蓄定期存单\"}]"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "condition": "开户种类 = 银行卡 || 开户种类 = 储蓄存折",
+      "conditionTree": "[{\"l\":\"开户种类\",\"m\":\"=\",\"r\":\"银行卡\"},\"||\",{\"l\":\"开户种类\",\"m\":\"=\",\"r\":\"储蓄存折\"}]"
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 4,
+      "target": -1,
+      "condition": "币种 = 人民币",
+      "conditionTree": "[{\"l\":\"币种\",\"m\":\"=\",\"r\":\"人民币\"}]"
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "condition": "币种 != 人民币",
+      "conditionTree": "[{\"l\":\"币种\",\"m\":\"!=\",\"r\":\"人民币\"}]"
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 6,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 7,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    }
+  ],
+  "style": [
+    {
+      "id": 7,
+      "geometry": {
+        "x": 890,
+        "y": 340,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 1,
+      "geometry": {
+        "x": 150,
+        "y": 230,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 0,
+      "geometry": {
+        "x": 40,
+        "y": 220,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": -1,
+      "geometry": {
+        "x": 1070,
+        "y": 220,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": 2,
+      "geometry": {
+        "x": 360,
+        "y": 90,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 3,
+      "geometry": {
+        "x": 320,
+        "y": 340,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 4,
+      "geometry": {
+        "x": 680,
+        "y": 220,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 5,
+      "geometry": {
+        "x": 530,
+        "y": 340,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 6,
+      "geometry": {
+        "x": 890,
+        "y": 220,
+        "width": 100,
+        "height": 50
+      }
+    }
+  ]
+}

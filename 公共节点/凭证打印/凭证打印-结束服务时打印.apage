@@ -1,0 +1,1726 @@
+{
+  "name": "凭证打印-结束服务时打印",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "20%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "group",
+              "data": {
+                "label": "打印列表",
+                "modelData": "",
+                "level": "medium",
+                "padding": 0,
+                "margin": 0,
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、获取客户临柜所有的待打印纸质凭证，并将待打印凭证名称以树形结构展示在该列表；\r\n2、树形结构的一级目录为待打印凭证所对应的业务；二级目录为待打印凭证名称；\r\n3、如果该凭证已被打印过，则灰色字体展示凭证名称，所选中的凭证，凭证名称为蓝色字体，否则正常字体展示；\r\n4、默认选树结构顺序第一个未打印的；\r\n5、点击该凭证名称，则将该凭证内容（带格式）展示在“当前打印凭证预览”区域。",
+                    "type": "自定义规则"
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人开户",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户信息维护凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "开户凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "签约协议",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人存款",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#00B0F0",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人存款凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#00B0F0",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "80%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "group",
+              "data": {
+                "label": "当前打印凭证预览",
+                "modelData": "",
+                "level": "medium",
+                "padding": 0,
+                "margin": 0,
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "凭证内容（个人存款示例）",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {
+                            "初始化": [
+                              {
+                                "name": "1、显示凭证内容（带格式）；\r\n2、如果当前打印的凭证内容不超过纸张大小，则按正常预览；如果超过，则需要根据纸张大小计算打印内容后，分页预览分页打印，预览内容下方需要增加本凭证的总页数以及当前打印的页数。",
+                                "type": "自定义规则"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人存款",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "交易日期：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "交易时间：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "机构代码：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "柜员号：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "交易流水：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户号：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户名称：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "证件类型：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "证件号码：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "账号：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "账户名称：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "---------------------------------------------本凭证共N页，当前第X页，以下内容为空---------------------------------------------",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "打印提示",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {
+                            "初始化": [
+                              {
+                                "name": "根据不同凭证，提示当前打印凭证名称以及提示柜员插入的业务凭证种类，如果打印的凭证内容超过对应凭证纸张大小，需要增加提示本凭证的总页数以及当前打印的页数。",
+                                "type": "自定义规则"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "单张示例：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        },
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "当前打印：个人存款凭证，请插入业务凭证（A5）后点击“打印”开始打印",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "33%",
+                        "align": "right",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "多张示例：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "当前打印：个人存款凭证，共N页，当前第X页",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        },
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "请插入业务凭证（A5）后点击“打印”开始打印",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "100%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "container",
+                          "component": "row",
+                          "data": {
+                            "label": "行",
+                            "width": "100%",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": [
+                            {
+                              "type": "container",
+                              "component": "col",
+                              "data": {
+                                "label": "列",
+                                "width": "50%",
+                                "align": "left",
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {},
+                              "children": []
+                            },
+                            {
+                              "type": "container",
+                              "component": "col",
+                              "data": {
+                                "label": "列",
+                                "width": "50%",
+                                "align": "left",
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "container",
+                          "component": "button-group",
+                          "data": {
+                            "label": "组",
+                            "modelData": "",
+                            "width": "100%",
+                            "align": "center",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": [
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "打印",
+                                "modelData": "",
+                                "type": "primary",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "该按钮一直处于可操作状态；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮，调用打印机进行凭证打印。弹出提示“正在进行XX打印，请稍等”（XX为打印凭证名称），当前页面置灰；",
+                                    "type": "自定义规则"
+                                  },
+                                  {
+                                    "name": "本凭证打印完成后；\r\n     1）如果还有未打印凭证，焦点直接进入打印列表下一个未打印凭证，并自动触发点击事件；\r\n     2）如果全部打印完成，则提示001（信息提示框，提示，按钮【确定】，“全部凭证已经打印完成！”，选择【确定】，关闭提示，继续执行下一节点。）。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "退出",
+                                "modelData": "",
+                                "type": "text",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "该按钮一直处于可操作状态；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮，提示002（信息确认框，警告类，提示，按钮【是】【否】，“还存在未打印纸质凭证，是否退出打印？（退出后可通过统一补打交易进行打印）”，选择【是】：关闭提示，退出结束服务；选择【否】：关闭提示，停留在当前页面。）。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

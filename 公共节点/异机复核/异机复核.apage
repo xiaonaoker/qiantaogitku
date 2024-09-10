@@ -1,0 +1,199 @@
+{
+  "name": "异机复核",
+  "children": [
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "原交易界面",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "步进式转为平铺式；",
+                        "type": "自定义规则"
+                      },
+                      {
+                        "name": "双敲复核字段域以红色框高亮显示，且清空置为必输；",
+                        "type": "自定义规则"
+                      },
+                      {
+                        "name": "其他业务要素还原业务受理时所录入的业务信息。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "提交",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "判断双敲复核字段域是否为空；如果为空，则提示001（信息提示框，错误，按钮【确定】，“待复核要素域为空，请输入！”，选择【确定】，关闭提示，焦点回到首个空必输域。），同时在每个空必输域下提示002（校验错误提示，“不能为空！”）；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果所有双敲复核字段域均不为空，判断双敲复核字段域是否与经办柜员输入一致：\r\n    1）如果一致则该复核任务状态变更为“已复核”，同时在复核柜员端执行提交至后台系统，交易成功后根据交易登记复核流水，并根据具体交易配置生成凭证内容，并将凭证内容关联到本复核任务：\r\n        （1）如果凭证内容无需客户签名且可电子化，则直接生成电子凭证；\r\n        （2）如果凭证内容需要客户签名，或需要打印，则：如果复核任务的业务为有识别客户类的交易，将打印内容推送给经办柜员，进入客户视图中的待打印列表，根据具体交易具体设置凭证模式：打印或电子凭证；如果复核任务的业务非有识别客户类的交易，可通过复核任务查询交易进行打印或电子化；\r\n    2）如果与经办柜员输入不一致，则提示003（确认提示框，提示，按钮【是】【否】，“复核录入内容与经办柜员录入不一致，是否退回经办？”，选择【是】：关闭提示，将复核任务做退回处理，并登记复核任务表，该复核任务状态更新为已退回；选择【否】：关闭提示，焦点回到校验不一致的第一个双敲复核字段域。）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "退出",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，提示004（确认提示框，提示，按钮【是】【否】，“当前复核未提交，是否关闭？”，选择【是】：关闭提示，退出复核，复核任务状态、复核柜员状态不变；选择【否】：关闭提示，停留在当前页面，焦点位置不变。）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

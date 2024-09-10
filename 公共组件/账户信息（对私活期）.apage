@@ -1,0 +1,161 @@
+{
+  "name": "账户信息（对私活期）",
+  "description": "显示账号、户名等个人活期账户信息",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "录入方式",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "接触-1"
+          },
+          {
+            "label": "非接触-2"
+          },
+          {
+            "label": "读取词条-3"
+          },
+          {
+            "label": "手工输入-4"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账号/子序号",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "户名",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "开户日期",
+        "required": false,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "开户支行",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "介质类型",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "银行卡-1"
+          },
+          {
+            "label": "存折-2"
+          },
+          {
+            "label": "存单-3"
+          },
+          {
+            "label": "无介质-4"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户种类",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "Ⅰ类户-1"
+          },
+          {
+            "label": "Ⅱ类户-2"
+          },
+          {
+            "label": "虚拟账户-3"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户状态",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "币种",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账户余额",
+        "required": false,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账户可用余额",
+        "required": false,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    }
+  ]
+}

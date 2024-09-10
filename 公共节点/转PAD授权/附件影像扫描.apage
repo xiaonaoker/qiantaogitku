@@ -1,0 +1,694 @@
+{
+  "name": "附件影像扫描",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "|授权状态",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#00B0F0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "input",
+              "data": {
+                "label": "输入框",
+                "modelData": "",
+                "inputLimit": "echo",
+                "showLabel": false,
+                "labelAlign": "right",
+                "row": 1,
+                "placeholder": "",
+                "max": 0,
+                "contentType": "text",
+                "padding": 0,
+                "margin": 0,
+                "width": "33%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、回显当前授权状态，不可修改；\r\n2、授权状态说明：\r\n1）如果还未发出授权任务，则为待申请授权；\r\n2）如果授权任务已发出申请，但未被授权柜员获取，则为等待；\r\n3）如果授权任务已被授权柜员获取并进入pad授权界面，则为授权中。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "|授权时间",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#00B0F0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "input",
+              "data": {
+                "label": "输入框",
+                "modelData": "",
+                "inputLimit": "echo",
+                "showLabel": false,
+                "labelAlign": "right",
+                "row": 1,
+                "placeholder": "",
+                "max": 0,
+                "contentType": "text",
+                "padding": 0,
+                "margin": 0,
+                "width": "33%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、实时回显当前授权申请发起后等待时间（从点击“申请授权”开始计时，至返回授权结果止）；\r\n2、如果授权状态为“待申请授权”，则为00:00。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "|授权原因",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#00B0F0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "input",
+              "data": {
+                "label": "输入框",
+                "modelData": "",
+                "inputLimit": "echo",
+                "showLabel": false,
+                "labelAlign": "right",
+                "row": 1,
+                "placeholder": "",
+                "max": 0,
+                "contentType": "text",
+                "padding": 0,
+                "margin": 0,
+                "width": "80%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "根据“授权控制规则”回显授权条件。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "widget",
+      "component": "label",
+      "data": {
+        "label": "|授权影像（扫描）",
+        "modelData": "",
+        "fontSize": 13,
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "color": "#00B0F0",
+        "padding": 0,
+        "margin": 0,
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {}
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "影像控件",
+                    "modelData": "",
+                    "fontSize": 16,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "根据当前交易、扫描时点、扫描触发条件获取影像扫描目录，并获取目录中必扫凭证/附件，以及对应的扫描张数（如果有配置扫描张数就展示，没有就不限制扫描张数）。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "申请授权",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一致处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "1、判断必扫项是否已采集（或采集张数）是否合格；如果未采集，则提示001（信息提示框，错误，按钮【确定】，“当前必扫凭证为XXXX，X张、XXXX,X张，影像尚未采集，请采集！”，选择【确定】，关闭提示，焦点停留在该域。）（XXXX为扫描凭证名称、X为张数）；如果已采集符合要求，提交影像图像至影像平台，提交成功后暂存当前影像流水；\r\n2、判断是否已有授权人员登录厅堂PAD系统，如果未有人员登录，则提示002（信息提示框，错误，按钮【确定】，“当前无对应厅堂人员进行授权，无法进行PAD授权！”，选择【确定】，关闭提示，停留在当前页面。）；\r\n3、如有授权人员登录厅堂PAD系统，则将任务推送至厅堂PAD系统（任务包括：授权要点、授权原因、业务要素内容、影像流水id），由厅堂PAD系统通知对应人员，发送方式为所有符合授权岗位、级别要求的人员进行群发；\r\n4、申请授权发送成功后：\r\n     1）该按钮置灰，“补扫提交”按钮可操作；\r\n     2）同时展示标签“等待PAD授权中...\";\r\n     3）同时授权状态变更为“等待”，如果任务被授权柜员获取，则授权状态变更为“授权中”（刷新间隔时间可根据客户需求客户化）；\r\n     4）同时开始计时，如果超过5分钟（等待超时时间可客户化），授权状态还是等待（即未被授权柜员获取执行授权），则向PAD系统申请关闭任务，关闭任务申请后提示003（信息提示框，提示，按钮【确定】，“授权超时！”，选择【确定】：关闭提示，【申请授权】按钮激活，【补扫提交】按钮置灰，焦点落在【申请授权】按钮域，且隐藏“等待PAD授权中...”标签提示，且授权状态变更为“待申请授权”，等待计时归零。）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "取消授权",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一致处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "1、如果授权状态为“待申请授权”，则提示004（确认提示框，提示，按钮【是】【否】，“是否取消授权？”，选择【是】：关闭提示，关闭当前界面，返回交易界面；选择【否】：关闭提示。）；\r\n2、如果授权状态为“等待/授权中”，则提示005（确认提示框，提示，按钮【是】【否】，“已发起授权，是否取消授权？”，选择【是】：关闭提示，向PAD系统申请关闭任务，关闭任务后，关闭当前界面，返回交易界面；选择【否】：关闭提示。）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "补扫提交",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮初始置灰，申请授权成功后该按钮可操作（该按钮与申请授权按钮，只有一个处于可操作状态）；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，则复用原影像流水，再次提交影像控件的所有影像图像。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "等待PAD授权中...",
+                "modelData": "",
+                "fontSize": 16,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#C00000",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "授权状态为“等待/授权中”时展示该域，否则隐藏。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "container",
+              "component": "row",
+              "data": {
+                "label": "行",
+                "width": "100%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "col",
+                  "data": {
+                    "label": "列",
+                    "width": "50%",
+                    "align": "left",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "1、当pad授权返回授权结果后，系统提示授权结果，并更新授权登记簿；\r\n2、如果授权不通过，由系统自动更新授权登记表并提示006（信息提示框，提示，按钮【确定】，“授权不通过，不通过原因：XXXX！”，选择【确定】，关闭提示，返回交易界面。）（XXXX为授权结果中的不通过原因）；\r\n3、如果授权通过，则系统自动更新授权登记表并提示007（信息提示框，提示，按钮【确定】，“授权通过！”，选择【确定】，关闭提示，交易继续。）。",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

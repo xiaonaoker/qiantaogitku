@@ -1,0 +1,280 @@
+{
+  "node": [
+    {
+      "id": 10,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 9,
+      "type": "subProcess",
+      "name": "本地授权",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": [
+        "机构信息:机构号",
+        "机构信息:机构名称",
+        "机构信息:是否有授权柜员登录PAD",
+        "交易信息:交易柜员",
+        "授权信息:授权原因",
+        "授权信息:授权要点"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 7,
+      "type": "subProcess",
+      "name": "代理人证件核查",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 6,
+      "type": "subProcess",
+      "name": "人脸比对",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 5,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 4,
+      "type": "subProcess",
+      "name": "扫描&影像采集",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 3,
+      "type": "subProcess",
+      "name": "证件核查",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 2,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 0,
+      "type": "start",
+      "name": "开始",
+      "ruleDesc": ""
+    },
+    {
+      "id": -1,
+      "type": "end",
+      "name": "结束",
+      "ruleDesc": ""
+    }
+  ],
+  "channels": [
+    "柜面"
+  ],
+  "edge": [
+    {
+      "source": 0,
+      "target": 2,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 2,
+      "target": -1,
+      "condition": "触发位置 = 交易 && 核实结果 != 不通过",
+      "conditionTree": "[{\"l\":\"触发位置\",\"m\":\"=\",\"r\":\"交易\"},\"&&\",{\"l\":\"核实结果\",\"m\":\"!=\",\"r\":\"不通过\"}]",
+      "points": "[{\"x\":275,\"y\":80},{\"x\":1535,\"y\":80}]"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "condition": "触发位置 = 客户视图 || 核实结果 = 不通过",
+      "conditionTree": "[{\"l\":\"触发位置\",\"m\":\"=\",\"r\":\"客户视图\"},\"||\",{\"l\":\"核实结果\",\"m\":\"=\",\"r\":\"不通过\"}]"
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 4,
+      "target": 10,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "condition": "到场人员 = 客户本人 || 到场人员 = 法人",
+      "conditionTree": "[{\"l\":\"到场人员\",\"m\":\"=\",\"r\":\"客户本人\"},\"||\",{\"l\":\"到场人员\",\"m\":\"=\",\"r\":\"法人\"}]"
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "condition": "到场人员 != 客户本人 && 到场人员 != 法人",
+      "conditionTree": "[{\"l\":\"到场人员\",\"m\":\"!=\",\"r\":\"客户本人\"},\"&&\",{\"l\":\"到场人员\",\"m\":\"!=\",\"r\":\"法人\"}]"
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 7,
+      "target": 4,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 8,
+      "target": -1,
+      "condition": "核实结果 != 强制通过",
+      "conditionTree": "[{\"l\":\"核实结果\",\"m\":\"!=\",\"r\":\"强制通过\"}]",
+      "points": "[{\"x\":1235,\"y\":230},{\"x\":1535,\"y\":230}]"
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "condition": "核实结果 = 强制通过",
+      "conditionTree": "[{\"l\":\"核实结果\",\"m\":\"=\",\"r\":\"强制通过\"}]"
+    },
+    {
+      "source": 9,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 10,
+      "target": 6,
+      "condition": "证件照片 != 空 || 公安部照片 != 空",
+      "conditionTree": "[{\"l\":\"证件照片\",\"m\":\"!=\",\"r\":\"空\"},\"||\",{\"l\":\"公安部照片\",\"m\":\"!=\",\"r\":\"空\"}]"
+    },
+    {
+      "source": 10,
+      "target": 8,
+      "condition": "证件照片 = 空 && 公安部照片 = 空",
+      "conditionTree": "[{\"l\":\"证件照片\",\"m\":\"=\",\"r\":\"空\"},\"&&\",{\"l\":\"公安部照片\",\"m\":\"=\",\"r\":\"空\"}]",
+      "points": "[{\"x\":915,\"y\":230},{\"x\":1235,\"y\":230}]"
+    }
+  ],
+  "style": [
+    {
+      "id": 10,
+      "geometry": {
+        "x": 900,
+        "y": 150,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 9,
+      "geometry": {
+        "x": 1370,
+        "y": 145,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 8,
+      "geometry": {
+        "x": 1220,
+        "y": 150,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 7,
+      "geometry": {
+        "x": 520,
+        "y": 240,
+        "width": 130,
+        "height": 40
+      }
+    },
+    {
+      "id": 6,
+      "geometry": {
+        "x": 1030,
+        "y": 145,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 5,
+      "geometry": {
+        "x": 570,
+        "y": 150,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 4,
+      "geometry": {
+        "x": 740,
+        "y": 145,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 3,
+      "geometry": {
+        "x": 390,
+        "y": 145,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 2,
+      "geometry": {
+        "x": 260,
+        "y": 150,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 0,
+      "geometry": {
+        "x": 140,
+        "y": 140,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": -1,
+      "geometry": {
+        "x": 1520,
+        "y": 140,
+        "width": 50,
+        "height": 50
+      }
+    }
+  ]
+}

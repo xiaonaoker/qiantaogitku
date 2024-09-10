@@ -1,0 +1,1119 @@
+{
+  "name": "证件核查-客户本人法人",
+  "children": [
+    {
+      "type": "widget",
+      "component": "lane",
+      "data": {
+        "label": "泳道",
+        "width": "100%",
+        "height": 60,
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "1、如果是交易中触发打开，则以二级节点展示；否则以一级节点形式展示；\r\n2、如果到场人员为客户本人/法人/办理人，展示：核查-影像采集-人脸比对；\r\n3、如果到场人员为代理人，展示：核查-代理人核查-影像采集-代理人人脸比对；\r\n4、如果到场人员为监护人，展示：核查-监护人核查-影像采集-监护人人脸比对；\r\n5、如果到场人员为经办人，展示：核查-经办人核查-影像采集-经办人人脸比对。",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "客户核查",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#00B0F0",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "widget",
+          "component": "select",
+          "data": {
+            "label": "到场人员",
+            "modelData": "",
+            "inputLimit": "required",
+            "showLabel": true,
+            "labelAlign": "right",
+            "placeholder": "",
+            "options": [
+              {
+                "dm": "身份核查到场人员",
+                "label": "0客户亲临",
+                "value": ""
+              },
+              {
+                "dm": "身份核查到场人员",
+                "label": "1代理人办理",
+                "value": ""
+              },
+              {
+                "dm": "身份核查到场人员",
+                "label": "2监护人办理",
+                "value": ""
+              },
+              {
+                "dm": "身份核查到场人员",
+                "label": "3办理人办理（一次性金融服务）",
+                "value": ""
+              },
+              {
+                "dm": "身份核查到场人员",
+                "label": "4法人亲临",
+                "value": ""
+              },
+              {
+                "dm": "身份核查到场人员",
+                "label": "5经办人办理",
+                "value": ""
+              }
+            ],
+            "padding": 0,
+            "margin": 0,
+            "width": "50%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1）如交易有上送到场人员类型，回显对应对应值，并置为不可选；\r\n2）若客户视图打开身份核查且上送到场人员类型，回显对应值，是否可修改规则如下：\r\n   a若到场人员已核查（经过联网核查及人脸识别，则说明已确认业务办理模式），则到场人员无法进行修改；\r\n   b若已录入代理人信息或代理经办人信息，即便未进行联网核查或人脸识别，此情况属已确认业务办理模式，进入核查流程不可修改到场人员（此种情况是否可修改，可根据客户需求客户化），否则；\r\n   c否则，可修改到场人员；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "当客户年龄小于16岁，强制修改到场人为监护人办理且不可修改；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "选项可根据交易需求的代办控制规则中的办理人类型展示对应的选项；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "当交易识别当前交易符合办理人（一次性金融服务）模式时，如果业务办理模式不确定，则默认办理人办理；",
+                "type": "自定义规则"
+              }
+            ],
+            "选项变化": [
+              {
+                "name": "根据到场人员以及当前核查人回显“核查人员”栏位。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "select",
+          "data": {
+            "label": "核查人员",
+            "modelData": "",
+            "inputLimit": "echo",
+            "showLabel": true,
+            "labelAlign": "right",
+            "placeholder": "",
+            "options": [
+              {
+                "dm": "核查人员",
+                "label": "0客户本人",
+                "value": ""
+              },
+              {
+                "dm": "核查人员",
+                "label": "1代理人",
+                "value": ""
+              },
+              {
+                "dm": "核查人员",
+                "label": "2监护人",
+                "value": ""
+              },
+              {
+                "dm": "核查人员",
+                "label": "3办理人",
+                "value": ""
+              },
+              {
+                "dm": "核查人员",
+                "label": "4法人",
+                "value": ""
+              },
+              {
+                "dm": "核查人员",
+                "label": "5经办人",
+                "value": ""
+              }
+            ],
+            "padding": 0,
+            "margin": 0,
+            "width": "50%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、当到场人员选择客户亲临，默认为客户本人且不可修改；\r\n2、当到场人员选择代理人办理，默认为客户本人且不可修改；\r\n3、当到场人员选择监护人办理，默认为客户本人且不可修改；\r\n4、当到场人员选择办理人办理（一次性金融服务），默认为办理人且不可修改；\r\n5、当到场人员选择法人亲临，默认为法人且不可修改；\r\n6、当到场人员选择经办人办理，默认为法人且不可修改。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "select",
+          "data": {
+            "label": "证件类型",
+            "modelData": "",
+            "inputLimit": "required",
+            "showLabel": true,
+            "labelAlign": "right",
+            "placeholder": "",
+            "options": [
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1010 居民身份证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1011 临时居民身份证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1040 户口簿",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1020 军人身份证件",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1021 士兵证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1022 军官证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1023 文职干部证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1027 军队离休干部荣誉证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1030 武警身份证件",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1031 武警士兵证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1032 警官证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1033 武警文职干部证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1034 武警军官退休证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1035 武警文职干部退休证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1024 军官退休证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1025 文职干部退休证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1026 军事院校学员证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1071 港澳居民往来内地通行证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1072 台湾居民来往大陆通行证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1050 护照",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1051 中国护照",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1052 外国护照",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1121 外国人永久居留证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1120 外国人居留证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1070 港澳台居民往来通行证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1140 港澳台居民居住证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1142 港澳居民居住证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1080 港澳台居民身份证件",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1081 香港居民身份证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1082 澳门居民身份证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1083 台湾身份证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1141 台湾居民居住证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1060 学生证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1073 边民出入境通行证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1074 还乡证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "2300 宗教事务管理部门的批文或证明号码",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1090 执行公务证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1100 机动车驾驶证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1110 社会保障卡",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1130 旅行证件",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1700 外国身份证",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1998 无证件",
+                "value": ""
+              },
+              {
+                "dm": "证件类型-证件类型-对私客户",
+                "label": "1999 其他个人证件",
+                "value": ""
+              }
+            ],
+            "padding": 0,
+            "margin": 0,
+            "width": "50%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "若工作台已录入客户或核查信息，则此处回显：\r\n1）如果证件为可读证件，但证件携带标志=否，如果未核查或核查不通过，则此处回显证件类型，其他为空，如果核查通过，则回显证件类型、证件号码、姓名，不可修改；\r\n2）如果证件为可读证件但证件携带标志=是，则回显证件信息，不可修改；\r\n3）如果为不可读证件，如果核查通过，则回显证件类型、证件号码、姓名，不可修改，否则此处回显证件信息，可修改；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "若工作台无客户信息，则此处初始为空；",
+                "type": "自定义规则"
+              }
+            ],
+            "焦点离开": [
+              {
+                "name": "如果选择的证件类型为“居民身份证/港澳居民居住证/台湾居民居住证/外国人永久居留身份证”,即可读证件，则弹出机具读取弹出框，调用证件阅读仪读取证件信息，界面提醒放置可读证件；读取超时弹出失败提醒；也可以通过取消外设读取进行手工输入；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件类型为“居民身份证/港澳居民居住证/台湾居民居住证/外国人永久居留身份证”外的其他证件（即不可读），则焦点进入证件号码域；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件机读获取，则：\r\n1）将证件号码、客户名称回显，且不可修改；\r\n2）证件携带标志=是；\r\n3）证件获取方式=机读；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件为可读证件，但是获取方式为手工输入，则：\r\n1）证件号码必输，且可修改；\r\n2）证件携带表示=否；\r\n3）证件获取方式=手工录入；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件为不可读证件，则：\r\n1）证件号码必输，且可修改；\r\n2）证件携带表示=否；\r\n3）证件获取方式=手工录入。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "input",
+          "data": {
+            "label": "证件号码",
+            "modelData": "",
+            "inputLimit": "required",
+            "showLabel": true,
+            "labelAlign": "right",
+            "row": 1,
+            "placeholder": "",
+            "min": 0,
+            "max": 0,
+            "contentType": "text",
+            "padding": 0,
+            "margin": 0,
+            "width": "50%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "若工作台已录入客户或核查信息，则此处回显：\r\n1）如果证件为可读证件，但证件携带标志=否，如果未核查或核查不通过，则此处回显证件类型，其他为空，如果核查通过，则回显证件类型、证件号码、姓名，不可修改；\r\n2）如果证件为可读证件但证件携带标志=是，则回显证件信息，不可修改；\r\n3）如果为不可读证件，如果核查通过，则回显证件类型、证件号码、姓名，不可修改，否则此处回显证件信息，可修改；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件获取方式=机读，则该域根据机读回显，且不可修改；",
+                "type": "自定义规则"
+              }
+            ],
+            "焦点离开": [
+              {
+                "name": "[rule=证件号码录入控制]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=柜员自身办理校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=证件信息有效性校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=卡证一致性校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=客户名单校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=客户号唯一性校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=对私客户信息完整性校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "[rule=对私客户税收居民信息完整性校验]",
+                "type": "公共规则"
+              },
+              {
+                "name": "如果客户信息存在，则根据证件信息查询回显客户姓名，并回显在“姓名”域，不可修改；如果客户信息不存在，证件获取方式=机读，则姓名回显；否则姓名手输；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件类型为居民身份证、户口簿、港澳居民居住证、台湾居民居住证、外国人永久居留身份证，则焦点离开且校验通过后自动进行联网核查，根据核查结果回显“联网核查结果”域，并将联网核查照片展示在公安部照片中（为空，则展示为空即可）；如果证件类型为其其他证件，则隐藏“联网核查结果”域；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "根据证件信息判断客户年龄，如果＜16岁，则强制将到场人员修改为监护人。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "input",
+          "data": {
+            "label": "姓名",
+            "modelData": "",
+            "inputLimit": "required",
+            "showLabel": true,
+            "labelAlign": "right",
+            "row": 1,
+            "placeholder": "",
+            "min": 0,
+            "max": 0,
+            "contentType": "text",
+            "padding": 0,
+            "margin": 0,
+            "width": "50%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "若工作台已录入客户或核查信息，则此处回显：\r\n1）如果证件为可读证件，但证件携带标志=否，如果未核查或核查不通过，则此处回显证件类型，其他为空，如果核查通过，则回显证件类型、证件号码、姓名，不可修改；\r\n2）如果证件为可读证件但证件携带标志=是，则回显证件信息，不可修改；\r\n3）如果为不可读证件，如果核查通过，则回显证件类型、证件号码、姓名，不可修改，否则此处回显证件信息，可修改；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果证件获取方式=机读，则该域根据机读回显，且不可修改；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果客户信息存在，则根据证件信息查询回显客户姓名，并回显在该域，不可修改；如果客户信息不存在，证件获取方式=机读，则姓名回显；否则该域初始为空且必输；",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "select",
+                  "data": {
+                    "label": "联网核查结果",
+                    "modelData": "",
+                    "inputLimit": "echo",
+                    "showLabel": true,
+                    "labelAlign": "right",
+                    "placeholder": "",
+                    "options": [
+                      {
+                        "dm": "联网核查结果",
+                        "label": "00公民身份号码与姓名一致，且存在照片",
+                        "value": ""
+                      },
+                      {
+                        "dm": "联网核查结果",
+                        "label": "01公民身份号码与姓名一致，但不存在照片",
+                        "value": ""
+                      },
+                      {
+                        "dm": "联网核查结果",
+                        "label": "02公民身份号码存在，但与姓名不匹配",
+                        "value": ""
+                      },
+                      {
+                        "dm": "联网核查结果",
+                        "label": "03公民身份号码不存在",
+                        "value": ""
+                      },
+                      {
+                        "dm": "联网核查结果",
+                        "label": "04其他错误",
+                        "value": ""
+                      },
+                      {
+                        "dm": "联网核查结果",
+                        "label": "05输入的参数错误",
+                        "value": ""
+                      }
+                    ],
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "80%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "证件类型为可核查时回显，否则隐藏；",
+                        "type": "自定义规则"
+                      },
+                      {
+                        "name": "根据核查结果回显，不可修改。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "widget",
+                  "component": "button",
+                  "data": {
+                    "label": "重新核查",
+                    "modelData": "",
+                    "type": "primary",
+                    "size": "normal",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "如果进入该节点时客户未核查，则该按钮隐藏；如果进入该节点时客户已核查，则展示该按钮，且处于可操作状态；",
+                        "type": "自定义规则"
+                      }
+                    ],
+                    "点击后": [
+                      {
+                        "name": "点击该按钮，弹出提示（消息确认型，按钮：【否】【是】“该证件已核查过，是否重新核查？”，点击【否】关闭提示且定位下一个未核查人节点，如果没有下一个核查人，则关闭提示及交易（如果展示该按钮，则只能是从客户视图或菜单中进入）；点击【是】则调用联网核查接口，重新对当前客户进行核查并更新联网核查结果）。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "select",
+                  "data": {
+                    "label": "核查结果",
+                    "modelData": "",
+                    "inputLimit": "required",
+                    "showLabel": true,
+                    "labelAlign": "right",
+                    "placeholder": "",
+                    "options": [
+                      {
+                        "label": "0-通过",
+                        "value": ""
+                      },
+                      {
+                        "label": "1-强制通过"
+                      },
+                      {
+                        "label": "2-不通过"
+                      }
+                    ],
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "初始为空；",
+                        "type": "自定义规则"
+                      },
+                      {
+                        "name": "当联网核查结果值为“00 公民身份号码与姓名一致，且存在照片”，该域值默认为“通过”，且不可修改；",
+                        "type": "自定义规则"
+                      },
+                      {
+                        "name": "当联网核查结果值为“01 公民身份号码与姓名一致，但不存在照片”或“02 公民身份号码存在，但与姓名不匹配”或“03公民身份号码不存在”或“04 其他错误”或“05 输入的参数错误”，选项为“强制通过/不通过”，默认为“强制通过”，可修改；",
+                        "type": "自定义规则"
+                      },
+                      {
+                        "name": "不可系统核查证件，默认为空，选项为“强制通过/不通过”。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "照片信息",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#00B0F0",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "image",
+                  "data": {
+                    "label": "图片",
+                    "src": "",
+                    "alt": "",
+                    "width": 360,
+                    "height": 200,
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "证件为系统核查，此处回显系统核查返回的公安部留存照片，否则为空。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "image",
+                  "data": {
+                    "label": "图片",
+                    "src": "",
+                    "alt": "",
+                    "width": 360,
+                    "height": 200,
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "此处回显机读证件读取的证件中的照片，如果机读证件无照片或证件非机读，此处为空。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "公安部照片",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "证件照片",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "下一步",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮初始置灰，必输信息全部录入且基础校验通过后该按钮处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "如果核查结果为不通过，则直接退出交易或返回上一节点，且记录核查结果；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果核查结果为强制通过，则记录结果，并在身份核查结束前进行本地授权；",
+                "type": "自定义规则"
+              },
+              {
+                "name": "如果核查结果为通过，则记录结果，交易继续。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "上一步",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果从客户视图或菜单进入（即以交易形式打开），该按钮隐藏；如果从交易中进入，该按钮展示，且处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，返回交易上一节点。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "退出",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，退出交易，记录已系统核查结果，如果核查结果为强制通过或不通过，则记录核查结果为不通过（未授权的强制通过视同不通过）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "若客户身份已核查；根据客户视图已存在客户或代理人等人员信息和核查状态标志则进行回显。",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

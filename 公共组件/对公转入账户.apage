@@ -1,0 +1,61 @@
+{
+  "name": "对公转入账户",
+  "description": "选择转入账户的行名行号，录入账户户名、账号",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收款人账号",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "收款人客户风险等级",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收款人名称",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收款行行名",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收款行行号",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "node": [
+    {
+      "id": 3,
+      "type": "gateway",
+      "name": "网关"
+    },
+    {
+      "id": 2,
+      "type": "page",
+      "name": "基本信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 1,
+      "type": "gateway",
+      "name": "网关"
+    },
+    {
+      "id": 0,
+      "type": "start",
+      "name": "开始"
+    },
+    {
+      "id": -1,
+      "type": "end",
+      "name": "结束"
+    },
+    {
+      "id": 4,
+      "type": "page",
+      "name": "联系信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 5,
+      "type": "page",
+      "name": "涉税信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 6,
+      "type": "page",
+      "name": "涉税信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 7,
+      "type": "page",
+      "name": "基本信息",
+      "pageType": "fragment"
+    },
+    {
+      "id": 8,
+      "type": "page",
+      "name": "联系信息",
+      "pageType": "fragment"
+    }
+  ],
+  "edge": [
+    {
+      "source": 0,
+      "target": 1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "condition": "是否新增 = 是",
+      "conditionTree": "[{\"l\":\"是否新增\",\"m\":\"=\",\"r\":\"是\"}]",
+      "point": "220,140"
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "condition": "是否新增 = 否",
+      "conditionTree": "[{\"l\":\"是否新增\",\"m\":\"=\",\"r\":\"否\"}]"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "condition": "涉税信息是否完整 = 否 && 客户信息是否完整 = 否",
+      "conditionTree": "[{\"l\":\"涉税信息是否完整\",\"m\":\"=\",\"r\":\"否\"},\"&&\",{\"l\":\"客户信息是否完整\",\"m\":\"=\",\"r\":\"否\"}]"
+    },
+    {
+      "source": 3,
+      "target": 6,
+      "condition": "涉税信息是否完整 = 否 && 客户信息是否完整 = 是",
+      "conditionTree": "[{\"l\":\"涉税信息是否完整\",\"m\":\"=\",\"r\":\"否\"},\"&&\",{\"l\":\"客户信息是否完整\",\"m\":\"=\",\"r\":\"是\"}]"
+    },
+    {
+      "source": 3,
+      "target": 7,
+      "condition": "涉税信息是否完整 = 是 && 客户信息是否完整 = 否",
+      "conditionTree": "[{\"l\":\"涉税信息是否完整\",\"m\":\"=\",\"r\":\"是\"},\"&&\",{\"l\":\"客户信息是否完整\",\"m\":\"=\",\"r\":\"否\"}]",
+      "point": "380,270"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 5,
+      "target": -1,
+      "condition": "",
+      "conditionTree": "",
+      "point": "860,140"
+    },
+    {
+      "source": 6,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 8,
+      "target": -1,
+      "condition": "",
+      "conditionTree": "",
+      "point": "870,310"
+    }
+  ],
+  "style": [
+    {
+      "id": 3,
+      "geometry": {
+        "x": 320,
+        "y": 180,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 2,
+      "geometry": {
+        "x": 280,
+        "y": 50,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 1,
+      "geometry": {
+        "x": 200,
+        "y": 180,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 0,
+      "geometry": {
+        "x": 100,
+        "y": 170,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": -1,
+      "geometry": {
+        "x": 850,
+        "y": 170,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": 4,
+      "geometry": {
+        "x": 440,
+        "y": 50,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 5,
+      "geometry": {
+        "x": 610,
+        "y": 50,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 6,
+      "geometry": {
+        "x": 660,
+        "y": 170,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 7,
+      "geometry": {
+        "x": 440,
+        "y": 280,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "id": 8,
+      "geometry": {
+        "x": 610,
+        "y": 280,
+        "width": 100,
+        "height": 50
+      }
+    }
+  ]
+}

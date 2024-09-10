@@ -1,0 +1,828 @@
+{
+  "name": "人脸比对",
+  "children": [
+    {
+      "type": "widget",
+      "component": "lane",
+      "data": {
+        "label": "泳道",
+        "width": "100%",
+        "height": 60,
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "1、如果是交易中触发打开，则以二级节点展示；否则以一级节点形式展示；\r\n2、如果到场人员为客户本人/法人/办理人，展示：核查-影像采集-人脸比对；\r\n3、如果到场人员为代理人，展示：核查-代理人核查-影像采集-代理人人脸比对；\r\n4、如果到场人员为监护人，展示：核查-监护人核查-影像采集-监护人人脸比对；\r\n5、如果到场人员为经办人，展示：核查-经办人核查-影像采集-经办人人脸比对。",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "照片信息",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#00B0F0",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "image",
+                  "data": {
+                    "label": "图片",
+                    "src": "",
+                    "alt": "",
+                    "width": 300,
+                    "height": 200,
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "证件为系统核查，此处回显系统核查返回的公安部留存照片，否则为空。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "image",
+                  "data": {
+                    "label": "图片",
+                    "src": "",
+                    "alt": "",
+                    "width": 300,
+                    "height": 200,
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "此处回显现场采集的客户头像照片。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "image",
+                  "data": {
+                    "label": "图片",
+                    "src": "",
+                    "alt": "",
+                    "width": 300,
+                    "height": 200,
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "此处回显机读证件读取的证件中的照片，如果机读证件无照片或证件非机读，此处为空。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "公安部照片",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "现场采集照片",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "证件照片",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": "",
+            "accompany": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "custom": "",
+                "accompany": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "比对结果",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#00B0F0",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "50%",
+                "align": "left",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "select",
+                  "data": {
+                    "label": "人脸比对结果",
+                    "modelData": "",
+                    "inputLimit": "echo",
+                    "showLabel": true,
+                    "labelAlign": "right",
+                    "placeholder": "",
+                    "options": [
+                      {
+                        "label": "0-通过"
+                      },
+                      {
+                        "label": "1-不通过"
+                      }
+                    ],
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "根据人脸比对系统返回结果进行回显；若工作台存在比对结果，回显比对结果，支持重新比对。"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "20%",
+                "align": "center",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "button",
+                  "data": {
+                    "label": "重新比对",
+                    "modelData": "",
+                    "type": "primary",
+                    "size": "normal",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "该按钮一直处于可操作状态；"
+                      }
+                    ],
+                    "点击后": [
+                      {
+                        "name": "点击该按钮，重新调用人脸识别系统接口，重新进行人脸比对，并更新人脸比对结果。"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "20%",
+                "align": "center",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "button",
+                  "data": {
+                    "label": "重新采集",
+                    "modelData": "",
+                    "type": "primary",
+                    "size": "normal",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "该按钮一直处于可操作状态；",
+                        "type": "自定义规则"
+                      }
+                    ],
+                    "点击后": [
+                      {
+                        "name": "点击该按钮，返回影像采集页面，重新采集人像。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "证照-公安部照片：9分",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "回显证件照片和公安部照片比对结果，如果有一个照片为空，则隐藏；"
+                      },
+                      {
+                        "name": "如果分数低于设定的通过阈值，则分值以红色字体展示。"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "证照-现场照片：7分",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "回显证件照片和现场采集照片比对结果，如果证件照片为空，则隐藏；"
+                      },
+                      {
+                        "name": "如果分数低于设定的通过阈值，则分值以红色字体展示。"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "33%",
+                "align": "center",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "公安部照片-现场照片：8分",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "block": false,
+                    "width": "100%",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "回显公安部照片和现场采集照片比对结果，如果公安部照片为空，则隐藏；"
+                      },
+                      {
+                        "name": "如果分数低于设定的通过阈值，则分值以红色字体展示。"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "widget",
+          "component": "select",
+          "data": {
+            "label": "比对结果",
+            "modelData": "",
+            "inputLimit": "",
+            "showLabel": true,
+            "labelAlign": "right",
+            "placeholder": "",
+            "options": [
+              {
+                "label": "0-通过"
+              },
+              {
+                "label": "1-不通过"
+              },
+              {
+                "label": "2-强制通过"
+              }
+            ],
+            "padding": 0,
+            "margin": 0,
+            "width": "50%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果人脸比对结果为通过，则此处为通过，切不可修改；如果人脸比对结果为不通过，则默认为不通过，可修改为强制通过（选项为强制通过/不通过）。"
+              }
+            ]
+          }
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "下一步",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮：\r\n1）如果比对结果为通过/强制通过，则交易继续（校验是否有强制通过的，如果有则进入本地授权，否则结束核查）；\r\n2）如果比对结果为不通过，且是交易中触发身份核查，则提示（信息确认框，警告类，提示，按钮【退出交易】【暂不退出】，“身份核查不通过，交易无法继续，是否退出交易？”，选择【退出交易】：关闭提示，退出交易，记录本次核查结果；选择【暂不退出】：关闭提示，停留在当前页面。）；\r\n3）如果比对结果为不通过，且是客户视图或菜单中打开身份核查，则提示（信息确认框，警告类，提示，按钮【是】【否】，“身份核查不通过，可能会影响后续交易办理，是否退出核查？”，选择【是】：关闭提示，退出交易，记录本次核查结果；选择【否】：关闭提示，停留在当前页面。）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "上一步",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，返回交易上一节点，并记录当前比对结果（如果为强制通过，则记录为不通过）。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "退出",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮：\r\n1）如果身份核查结果有强制通过的或不通过的，则提示（信息确认框，警告类，提示，按钮【退出】【暂不退出】，“身份核查不通过，可能会影响交易办理，是否退出？”，选择【退出】：关闭提示，退出交易，记录本次核查结果（均是不通过）；选择【暂不退出】：关闭提示，停留在当前页面。）；\r\n2）如果身份核查结果均为通过，则记录交易结果，并退出交易。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "如果客户证件照片或公安部照片有不为空的，则进入该节点自动进行两两人脸比对，并回显比对结果；如果客户证件照片和公安部照片均为空，则跳过该节点。",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

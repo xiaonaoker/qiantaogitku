@@ -1,0 +1,919 @@
+{
+  "name": "账户识别-证件",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "radio",
+              "data": {
+                "label": "卡/折",
+                "modelData": "",
+                "inputLimit": "",
+                "value": "true",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": "",
+                "width": "50%"
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、如果入数据为账户获取，则默认选中该值；\r\n2、如果入数据（获取方式）为空，默认选中该值",
+                    "type": "自定义规则"
+                  }
+                ],
+                "焦点离开": [
+                  {
+                    "name": "选中该值时，且“是否选择子账户=是”，则默认展示“账号、子账户序号”，隐藏“证件类型、证件号码、客户名称、账户列表”；",
+                    "type": "自定义规则"
+                  },
+                  {
+                    "name": "选中该值时，且“是否选择子账户=否”，则默认展示“账号”，隐藏“证件类型、证件号码、客户名称、账户列表”；",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "widget",
+              "component": "radio",
+              "data": {
+                "label": "证件",
+                "modelData": "",
+                "inputLimit": "",
+                "value": "false",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": "",
+                "width": "50%"
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、如果入数据为证件获取，则默认选中该值，否则不选中",
+                    "type": "自定义规则"
+                  }
+                ],
+                "焦点离开": [
+                  {
+                    "name": "选中该值时，则默认展示“证件类型、证件号码、客户名称、账户列表”，隐藏“账号、子账户序号”；",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "证件类型",
+        "modelData": "",
+        "inputLimit": "required",
+        "showLabel": true,
+        "labelAlign": "right",
+        "placeholder": "",
+        "options": [
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1010 居民身份证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1011 临时居民身份证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1040 户口簿",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1020 军人身份证件",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1021 士兵证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1022 军官证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1023 文职干部证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1027 军队离休干部荣誉证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1030 武警身份证件",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1031 武警士兵证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1032 警官证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1033 武警文职干部证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1034 武警军官退休证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1035 武警文职干部退休证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1024 军官退休证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1025 文职干部退休证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1026 军事院校学员证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1071 港澳居民往来内地通行证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1072 台湾居民来往大陆通行证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1050 护照",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1051 中国护照",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1052 外国护照",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1121 外国人永久居留证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1120 外国人居留证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1070 港澳台居民往来通行证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1140 港澳台居民居住证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1142 港澳居民居住证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1080 港澳台居民身份证件",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1081 香港居民身份证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1082 澳门居民身份证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1083 台湾身份证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1141 台湾居民居住证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1060 学生证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1073 边民出入境通行证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1074 还乡证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "2300 宗教事务管理部门的批文或证明号码",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1090 执行公务证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1100 机动车驾驶证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1110 社会保障卡",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1130 旅行证件",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1700 外国身份证",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1998 无证件",
+            "value": ""
+          },
+          {
+            "dm": "证件类型-证件类型-对私客户",
+            "label": "1999 其他个人证件",
+            "value": ""
+          }
+        ],
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "该域展示信息根据入数据（证件类型展示名称）修改为指定值，如入数据为空，则不修改",
+            "type": "自定义规则"
+          },
+          {
+            "name": "初始焦点进入该域。默认为空",
+            "type": "自定义规则"
+          }
+        ],
+        "焦点离开": [
+          {
+            "name": "如果选择的证件类型为“居民身份证/港澳居民居住证/台湾居民居住证/外国人永久居留身份证”,即可读证件，则弹出机具读取弹出框，调用证件阅读仪读取证件信息，界面提醒放置可读证件；读取超时弹出失败提醒；也可以通过取消外设读取进行手工输入；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件类型为“居民身份证/港澳居民居住证/台湾居民居住证/外国人永久居留身份证”外的其他证件（即不可读），则焦点进入证件号码域；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件机读获取，则：\r\n1、将证件号码、客户名称回显，且不可修改；\r\n2、证件携带标志=是；\r\n3、证件获取方式=机读；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件为可读证件，但是获取方式为手工输入，则：\r\n1、证件号码必输，且可修改；\r\n2、证件携带表示=否；\r\n3、证件获取方式=手工录入；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件为不可读证件，则：\r\n1、证件号码必输，且可修改；\r\n2、证件携带表示=否；\r\n3、证件获取方式=手工录入；",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": null
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "证件号码",
+        "modelData": "",
+        "inputLimit": "depends",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "该域展示信息根据入数据（证件号码展示名称）修改为指定值，如入数据为空，则不修改",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件获取方式=机读，则该域根据机读回显，且不可修改",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件获取方式=机读，则该域初始为空，且必输",
+            "type": "自定义规则"
+          }
+        ],
+        "焦点离开": [
+          {
+            "name": "证件号码录入控制",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=客户信息是否存在]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=柜员自身办理校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=证件信息有效性校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=卡证一致性校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=客户名单校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=客户号唯一性校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=对私客户信息完整性校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "[rule=对私客户税收居民信息完整性校验]",
+            "type": "公共规则"
+          },
+          {
+            "name": "校验通过后，根据客户信息查询客户名下的满足入数据账户状态的账户信息：\r\n1、如果满足入数据账户状态的账户数量=0，则账户列表域展示“没有满足条件的账户”；\r\n2、如果满足入数据账户状态的账户数量≥1，则展示在账户列表中",
+            "type": "自定义规则"
+          },
+          {
+            "name": "校验通过后，则将客户信息同步至客户视图对应的客户信息域",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "客户名称",
+        "modelData": "",
+        "inputLimit": "echo",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "该域展示信息根据入数据（客户名称展示名称）修改为指定值，如入数据为空，则不修改",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件获取方式=机读，则根据机读回显该域信息，不可修改",
+            "type": "自定义规则"
+          },
+          {
+            "name": "如果证件获取方式=手工录入，且客户为行内存量客户，则根据证件类型+证件号码查询客户名称回显在该域；",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": null
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "账户列表",
+                "modelData": "",
+                "fontSize": 16,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#0070C0",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "table",
+      "data": {
+        "label": "账户列表",
+        "modelData": "",
+        "row": 3,
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "每行最多展示10行，超过则分页展示",
+            "type": "自定义规则"
+          },
+          {
+            "name": "该列表内容支持单选，选中后底纹加深",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": [
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "账号",
+            "titleAlign": "left",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "凭证种类",
+            "titleAlign": "left",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "凭证号码",
+            "titleAlign": "left",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "账户等级",
+            "titleAlign": "left",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "账户状态",
+            "titleAlign": "left",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "操作",
+            "titleAlign": "left",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "button",
+                "label": "选择子账户"
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果入数据是否选择子账户=是，且在账户列表选择了一条账户，则该按钮处于可操作状态，否则该按钮隐藏；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，则展示满足入数据（子账户要求）的子账户在子账户列表供选择。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "按钮组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "下一步",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "50%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮初始置灰，基础检查通过后（必输项等），该按钮处于可操作状态",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，交易继续",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "上一步",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "50%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "根据入数据选择是否有该按钮，如果有则展示，一直处于可操作状态，如果没有则隐藏",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，返回交易上一个节点",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "退出",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "50%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，则提示（确认提示框，提示，按钮【是】【否】，“此操作将退出交易，请确认是否继续？”，选择【是】：关闭提示，退出交易；选择【否】：关闭提示，停留在当前页面。）",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "dialog",
+      "data": {
+        "label": "子账户列表",
+        "titleAlign": "left",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "table",
+          "data": {
+            "label": "表格",
+            "modelData": "",
+            "row": 3,
+            "padding": 0,
+            "margin": 0,
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "子账户序号",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "产品名称",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "币种",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "存期",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "到期日期",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "根据证件获取账户，只支持客户本人的证件",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <Setting>
+    <是否无纸化/>
+    <输出条件/>
+    <凭证类型>A5(148*210)</凭证类型>
+    <是否打印电子印章/>
+    <电子印章类型/>
+    <备注/>
+  </Setting>
+  <Content>
+    <Label id="Label1" name="交易名称" printType="不打印字样但打印内容" rule="" Width="30" Height="5" Left="65" Top="15"/>
+    <LabelInput id="LabelInput3" name="交易流水" printType="打印字样且内容" rule="" Width="49" Height="5" Left="6" Top="27"/>
+    <LabelInput id="LabelInput4" name="交易机构" printType="打印字样且内容" rule="格式：机构号-机构名称" Width="49" Height="5" Left="63" Top="27"/>
+    <LabelInput id="LabelInput5" name="交易时间" printType="打印字样且内容" rule="日期+时间，格式YYYY:MM:DD  HH:MM:SS" Width="49" Height="5" Left="121" Top="27"/>
+  </Content>
+</Root>

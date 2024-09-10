@@ -1,0 +1,234 @@
+{
+  "name": "账户信息（对私定期）",
+  "description": "显示账号、户名等个人定期账户信息",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "录入方式",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "磁条输入-0"
+          },
+          {
+            "label": "芯片输入-1"
+          },
+          {
+            "label": "手工输入-2"
+          },
+          {
+            "label": "芯片非接触式输入-3"
+          },
+          {
+            "label": "存单输入-4"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账号/子序号",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "户名",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "介质类型",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "银行卡-1"
+          },
+          {
+            "label": "存折-2"
+          },
+          {
+            "label": "存单-3"
+          },
+          {
+            "label": "无介质-4"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户种类",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "Ⅰ类户-1"
+          },
+          {
+            "label": "Ⅱ类户-2"
+          },
+          {
+            "label": "虚拟账户-3"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "开户金额",
+        "required": false,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账户余额",
+        "required": false,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户状态",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "币种",
+        "required": true,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "起息日",
+        "required": true,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "到期日",
+        "required": true,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "存款期",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "下拉框内容根据行里实际情况展示-1"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "存款种类",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "下拉框内容根据行里实际情况展示-1"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "通兑标志",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "开户机构通兑-1"
+          },
+          {
+            "label": "分行通兑-2"
+          },
+          {
+            "label": "全行通兑-3"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "转存标志",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "开户机构通存-1"
+          },
+          {
+            "label": "分行通存-2"
+          },
+          {
+            "label": "全行通存-3"
+          }
+        ],
+        "width": "50%"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <Setting>
+    <输出条件/>
+    <备注/>
+    <模板配置>
+      <表头>柜面基板需求2023/凭证格式/凭证表头.凭证.ashow</表头>
+      <表尾/>
+    </模板配置>
+  </Setting>
+  <Content/>
+</Root>

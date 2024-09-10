@@ -1,0 +1,251 @@
+{
+  "name": "代理人",
+  "description": "选择是否代理人，并录入代理人信息",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "证件类型",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "居民身份证-1"
+          },
+          {
+            "label": "临时身份证-2"
+          },
+          {
+            "label": "户口薄-3"
+          },
+          {
+            "label": "中国护照-4"
+          },
+          {
+            "label": "外国护照-5"
+          },
+          {
+            "label": "港澳居民来往内地通行证-6"
+          },
+          {
+            "label": "港澳居民居住证-7"
+          },
+          {
+            "label": "台湾居民来往大陆通行证-8"
+          },
+          {
+            "label": "台湾居民居住证-9"
+          },
+          {
+            "label": "武警士兵证-10"
+          },
+          {
+            "label": "军官证-11"
+          },
+          {
+            "label": "外国人永久居留身份证-12"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "证件号码",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "姓名",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "性别",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "男-1"
+          },
+          {
+            "label": "女-2"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "证件有效期",
+        "required": true,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "证件失效日期",
+        "required": true,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "职业",
+        "required": true,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "联系电话",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "联系地址",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "代理关系-对私",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "直系亲属（配偶、子女、父母）-1"
+          },
+          {
+            "label": "旁系亲属-2"
+          },
+          {
+            "label": "同事-3"
+          },
+          {
+            "label": "同学-4"
+          },
+          {
+            "label": "朋友-5"
+          },
+          {
+            "label": "其他-6"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "代理关系",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "代理原因",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "存款人死亡，代理人持合法文书-1"
+          },
+          {
+            "label": "存款人委托他人办理，提供《XXX银行个人业务代理关系真实性核查表》-2"
+          },
+          {
+            "label": "存款人意识不清，代理人持合法文书-3"
+          },
+          {
+            "label": "普通代理（默认）-4"
+          },
+          {
+            "label": "其他，自行录入信息-5"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "代理原因",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "按钮组"
+      },
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "取消",
+            "type": "text",
+            "width": "50%"
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "确认",
+            "type": "primary",
+            "width": "50%"
+          }
+        }
+      ]
+    }
+  ]
+}

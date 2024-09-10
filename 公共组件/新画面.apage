@@ -1,0 +1,223 @@
+{
+  "name": "新画面",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "layoutData": 1,
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "layoutData": 1,
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "layoutData": 1,
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "layoutData": 1,
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "layoutData": 1,
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "layoutData": 1,
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "layoutData": 2,
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

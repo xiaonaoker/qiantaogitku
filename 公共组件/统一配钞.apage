@@ -1,0 +1,242 @@
+{
+  "name": "统一配钞",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "交易金额",
+        "modelData": "",
+        "inputLimit": "echo",
+        "placeholder": "",
+        "max": "",
+        "contentType": "currency",
+        "accompany": "",
+        "width": "50%"
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "回显柜员录入的交易金额",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "container",
+      "component": "table",
+      "data": {
+        "label": "表格",
+        "modelData": "",
+        "row": "2",
+        "width": "100%"
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "现金流方向",
+            "modelData": "",
+            "inputLimit": "required",
+            "accompany": "",
+            "custom": "表格内下拉框，内容包括：\n0-收入\n1-支出",
+            "childComponents": [
+              {
+                "type": "select",
+                "label": ""
+              }
+            ]
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "券别",
+            "modelData": "",
+            "inputLimit": "required",
+            "accompany": "",
+            "custom": "表格内下拉框",
+            "childComponents": [
+              {
+                "type": "select",
+                "label": ""
+              }
+            ]
+          },
+          "rules": {
+            "选项变化": [
+              {
+                "name": "当币种为“12-英镑”时，卷别只展示50、20、10、5面值纸币；\r\n当币种为“13-港元”时，卷别只展示1000、500、100、50、20、10面值纸币；\r\n当币种为“14-美元”时，卷别只展示100、50、20、10、5、2、1面值纸币；\r\n当币种为“15-瑞士法郎”时，卷别只展示1000、200、100、50、20、10面值纸币；\r\n当币种为“27-日元”时，卷别只展示10000、5000、2000、1000面值纸币；\r\n当币种为“28-加拿大元”时，卷别只展示100、50、20、10、5面值纸币；\r\n当币种为“29-澳大利亚元”时，卷别只展示100、50、20、10、5面值纸币；\r\n当币种为“38-欧元”时，卷别只展示500、200、100、50、20、10、5面值纸币；\r\n当币种为人民币时，卷别只展示100、50、20、10、5、1元面值，及5角、1角；",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "张数",
+            "modelData": "",
+            "inputLimit": "required",
+            "accompany": "",
+            "childComponents": [
+              {
+                "type": "input",
+                "label": ""
+              }
+            ]
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "操作",
+            "modelData": "",
+            "accompany": "",
+            "custom": "1、共两个按钮：删除、继续添加\n2、删除按钮：点击删除本行数据，同时更新收入金额或付出金额、差额的值。\n3、继续添加：始终在最后一行显示，点击新增一行\n4、本币种所有券别添加完成后，视为列表的最后一行",
+            "childComponents": [
+              {
+                "type": "button",
+                "label": "继续添加"
+              }
+            ]
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "操作",
+            "modelData": "",
+            "accompany": "",
+            "childComponents": [
+              {
+                "type": "button",
+                "label": "删除"
+              }
+            ]
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "点击删除本行数据，同时更新收入金额或付出金额、差额的值。\r\n初始状态无此按钮；\r\n本币种所有券别添加完成后，视为列表的最后一行",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收入金额",
+        "modelData": "",
+        "inputLimit": "echo",
+        "placeholder": "",
+        "max": "",
+        "contentType": "currency",
+        "accompany": "",
+        "width": "50%"
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "统计现金流方向为收入的行的所有金额的总和，每输入一行，汇总一次",
+            "type": "自定义规则"
+          }
+        ],
+        "文本变化": [
+          {
+            "name": "统计现金流方向为收入的行的所有金额的总和，每输入一行，汇总一次",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "付出金额",
+        "modelData": "",
+        "inputLimit": "echo",
+        "placeholder": "",
+        "max": "",
+        "contentType": "currency",
+        "accompany": "",
+        "width": "50%"
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "统计现金流方向为付出的行的所有金额的总和，每输入一行，汇总一次",
+            "type": "自定义规则"
+          }
+        ],
+        "文本变化": [
+          {
+            "name": "统计现金流方向为付出的行的所有金额的总和，每输入一行，汇总一次",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "差额",
+        "modelData": "",
+        "inputLimit": "echo",
+        "placeholder": "",
+        "max": "",
+        "contentType": "currency",
+        "accompany": "差额=|收入金额-付出金额|",
+        "width": "50%"
+      },
+      "rules": {
+        "文本变化": [
+          {
+            "name": "差额=|收入金额-付出金额|",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "button",
+      "data": {
+        "label": "确定",
+        "modelData": "",
+        "type": "primary",
+        "accompany": "差额是等于|收入金额-付出金额|",
+        "width": "100%"
+      },
+      "rules": {
+        "点击后": [
+          {
+            "name": "点击后判断差额是否等于|收入金额-付出金额|",
+            "type": "自定义规则"
+          },
+          {
+            "name": "判断差额是否与交易金额一致，如果不一致，则提示（信息提示框  错误类  错误  按钮【是】【否】）：“差额与交易金额不一致，是否继续”。点击是将表格内已录入的信息清空，焦点停留在表格内选择现金流的框内，。点击否，退出交易",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "   1）该组件适用于现金类对客交易，现金收付及找零时的券别录入，更好的帮助柜员钱箱帐实相符；    2）使用交易中选择的币种；    3）回显交易金额，“差额”需要与交易金额一致。    4）目前仅支持01人币民，12英磅，13港币，14美元，15瑞士法郎，27日元，28加拿大元，29澳大利亚元，38欧元的配钞"
+}

@@ -1,0 +1,121 @@
+{
+  "name": "账户列表",
+  "description": "显示客户名下所有账户信息及账户余额、状态等",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账号/子序号序号",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "户名",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "开户支行",
+        "required": true,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "开户日期",
+        "required": true,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "介质类型",
+        "required": true,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户状态",
+        "required": true,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "币种",
+        "required": true,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "余额",
+        "required": true,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "可用余额",
+        "required": true,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "起息日",
+        "required": true,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "到期日",
+        "required": true,
+        "width": "50%"
+      }
+    }
+  ]
+}

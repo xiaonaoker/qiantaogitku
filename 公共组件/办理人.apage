@@ -1,0 +1,471 @@
+{
+  "name": "办理人",
+  "description": "",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "证件类型",
+        "modelData": "客户信息:证件类型",
+        "inputLimit": "",
+        "selectMode": "single",
+        "showLabel": true,
+        "labelAlign": "right",
+        "placeholder": "",
+        "options": [
+          {
+            "label": "居民身份证-1"
+          },
+          {
+            "label": "临时身份证-2"
+          },
+          {
+            "label": "户口薄-3"
+          },
+          {
+            "label": "中国护照-4"
+          },
+          {
+            "label": "外国护照-5"
+          },
+          {
+            "label": "港澳居民来往内地通行证-6"
+          },
+          {
+            "label": "港澳居民居住证-7"
+          },
+          {
+            "label": "台湾居民来往大陆通行证-8"
+          },
+          {
+            "label": "台湾居民居住证-9"
+          },
+          {
+            "label": "武警士兵证-10"
+          },
+          {
+            "label": "军官证-11"
+          },
+          {
+            "label": "外国人永久居留身份证-12"
+          }
+        ],
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_2"
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "证件号码",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "appendButton": false,
+        "appendButtonLabel": "",
+        "appendSelect": false,
+        "appendSelectOptions": [],
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_3"
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "姓名",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "appendButton": false,
+        "appendButtonLabel": "",
+        "appendSelect": false,
+        "appendSelectOptions": [],
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_4"
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "性别",
+        "modelData": "",
+        "inputLimit": "",
+        "selectMode": "single",
+        "showLabel": true,
+        "labelAlign": "right",
+        "placeholder": "",
+        "options": [
+          {
+            "label": "男-1"
+          },
+          {
+            "label": "女-2"
+          }
+        ],
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_5"
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "证件有效期",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "format": "yyyy-mm-dd",
+        "Earliest": "",
+        "latest": "",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_6"
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "证件失效日期",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "format": "yyyy-mm-dd",
+        "Earliest": "",
+        "latest": "",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_7"
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "职业",
+        "modelData": "",
+        "inputLimit": "",
+        "selectMode": "single",
+        "showLabel": true,
+        "labelAlign": "right",
+        "placeholder": "",
+        "options": [],
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_8"
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "联系电话",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "appendButton": false,
+        "appendButtonLabel": "",
+        "appendSelect": false,
+        "appendSelectOptions": [],
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_9"
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "联系地址",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "appendButton": false,
+        "appendButtonLabel": "",
+        "appendSelect": false,
+        "appendSelectOptions": [],
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_10"
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "经办关系",
+        "modelData": "",
+        "inputLimit": "",
+        "selectMode": "single",
+        "showLabel": true,
+        "labelAlign": "right",
+        "placeholder": "",
+        "options": [
+          {
+            "label": "直系亲属（配偶、子女、父母）-1"
+          },
+          {
+            "label": "旁系亲属-2"
+          },
+          {
+            "label": "同事-3"
+          },
+          {
+            "label": "同学-4"
+          },
+          {
+            "label": "朋友-5"
+          },
+          {
+            "label": "其他-6"
+          }
+        ],
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_11"
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "经办关系",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "appendButton": false,
+        "appendButtonLabel": "",
+        "appendSelect": false,
+        "appendSelectOptions": [],
+        "required": false
+      },
+      "rules": {},
+      "id": "1697769155432_12"
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "经办原因",
+        "modelData": "",
+        "inputLimit": "",
+        "selectMode": "single",
+        "showLabel": true,
+        "labelAlign": "right",
+        "placeholder": "",
+        "options": [
+          {
+            "label": "存款人死亡，代理人持合法文书-1"
+          },
+          {
+            "label": "存款人委托他人办理，提供《XXX银行个人业务代理关系真实性核查表》-2"
+          },
+          {
+            "label": "存款人意识不清，代理人持合法文书-3"
+          },
+          {
+            "label": "普通代理（默认）-4"
+          },
+          {
+            "label": "其他，自行录入信息-5"
+          }
+        ],
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "required": true
+      },
+      "rules": {},
+      "id": "1697769155432_13"
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "经办原因",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "accompany": "",
+        "custom": "",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "appendButton": false,
+        "appendButtonLabel": "",
+        "appendSelect": false,
+        "appendSelectOptions": [],
+        "required": false
+      },
+      "rules": {},
+      "id": "1697769155432_14"
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "按钮组",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": "",
+        "modelData": ""
+      },
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "确认",
+            "type": "primary",
+            "accompany": "",
+            "custom": "",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "modelData": "",
+            "width": "50%"
+          },
+          "rules": {},
+          "id": "1697769155432_16"
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "取消",
+            "type": "text",
+            "accompany": "",
+            "custom": "",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "modelData": "",
+            "width": "50%"
+          },
+          "rules": {},
+          "id": "1697769155432_17"
+        }
+      ],
+      "rules": {},
+      "id": "1697769155432_15",
+      "formRules": {
+        "初始化": [
+          {
+            "conditions": [
+              ""
+            ],
+            "execution": "<p> <a href=\"代理人\" target=\"apage\">[画面模型]代理人</a> </p>",
+            "id": "2590234",
+            "change": ""
+          }
+        ]
+      }
+    }
+  ],
+  "rules": {},
+  "id": "1697769155432_1"
+}

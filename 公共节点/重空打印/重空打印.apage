@@ -1,0 +1,227 @@
+{
+  "name": "重空打印",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "打印提示信息（存折打印示例）",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": true,
+                "underline": false,
+                "color": "#000000",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、目的是提示柜员插入对应的重空；\r\n2、提示内容包含：重空种类，柜员插入对应凭证；\r\n3、如果是存折，需要提示柜员翻到第几页再插入打印机。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "当前打印：个人活期存折",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#000000",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "请将存折翻至第X页后插入打印机，并点击“打印”开始打印",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#000000",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "打印",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，调用打印机打印。弹出提示“正在进行XX打印，请稍等”（XX为打印重空名称），当前页面置灰；打印完成如还有重空打印则继续执行重空打印，如无其他重空需要打印，则交易进入下一流程节点。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "退出",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，退出重空打印。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "1、如果是存折打印，需要先调用核心存折补登接口，查询存折打印状态，同时返回存折要打印的页数、行数等信息，以打印提示的形式提示柜员进行翻页操作。\r\n2、存折打印查询接口（海峡核心接口（福建海峡银行ESB项目_字段映射_新核心系统_V0.71）：dp2075补登折）。",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

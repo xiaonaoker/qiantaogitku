@@ -1,0 +1,74 @@
+{
+  "name": "款项用途",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "款项用途",
+        "modelData": "",
+        "inputLimit": "required",
+        "placeholder": "款项用途",
+        "options": [
+          {
+            "label": "1001-个人薪酬"
+          },
+          {
+            "label": "1002-销售款/贷款"
+          },
+          {
+            "label": "1003-工程款"
+          },
+          {
+            "label": "1004-各类收费"
+          },
+          {
+            "label": "1005-借款"
+          },
+          {
+            "label": "1006-还款"
+          },
+          {
+            "label": "1007-利息收入"
+          },
+          {
+            "label": "1008-投资收益"
+          }
+        ],
+        "accompany": "",
+        "width": "100%"
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "默认1001-个人薪酬",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "备注",
+        "modelData": "",
+        "inputLimit": "depends",
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "accompany": "",
+        "width": "100%"
+      },
+      "rules": {
+        "文本变化": [
+          {
+            "name": "当款项来源为“其他”时必输，否则为选输项",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "账务类交易录入款项用途"
+}

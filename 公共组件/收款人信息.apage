@@ -1,0 +1,77 @@
+{
+  "name": "收款人信息",
+  "description": "选择收款人行名行号，录入收款人姓名、账号，选择到账时间",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收款人账号",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "户名",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "收款行名称",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "button",
+      "data": {
+        "label": "收款行查询",
+        "type": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "收款人风险等级",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "到账时间",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "实时-1"
+          },
+          {
+            "label": "2小时内-2"
+          }
+        ],
+        "width": "50%"
+      }
+    }
+  ]
+}

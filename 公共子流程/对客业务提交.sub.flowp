@@ -1,0 +1,670 @@
+{
+  "node": [
+    {
+      "id": 0,
+      "type": "start",
+      "name": "开始",
+      "ruleDesc": ""
+    },
+    {
+      "id": -1,
+      "type": "end",
+      "name": "结束",
+      "ruleDesc": ""
+    },
+    {
+      "id": 31,
+      "type": "subProcess",
+      "name": "扫描&影像采集",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 32,
+      "type": "subProcess",
+      "name": "结束服务预处理",
+      "channels": [
+        "柜面"
+      ],
+      "rules": [],
+      "formRules": [],
+      "dataIn": [],
+      "dataOut": [],
+      "节点分类": "逻辑节点",
+      "节点展示形式": "无页面",
+      "重入类型": "禁止重入",
+      "业务概述": "结束服务的确认和后续操作的预检查",
+      "业务规则": "1、本次临柜业务全部完成后，柜员可点击结束服务完成本次服务，弹出提示框（（信息确认框，警告类，提示，按钮【是】【否】，“是否结束当前客户服务？”，选择【是】：关闭提示，继续校验；选择【否】：关闭提示，继续客户服务））；\n2、柜员在弹出框选择【是】，则继续校验：\n     1）如果存在电子凭证：检测柜外清，如果柜外清状态异常，提示（信息选择框，提示，按钮【转纸质】【继续检测】【取消】，“柜外清状态异常，请检查设备及设备连接。是否转为纸质打印或继续尝试检测柜外清？”，选择【转纸质】：关闭提示，并将当前业务电子凭证转纸质打印；选择【继续检测】：关闭提示，再次检测柜外清状态；选择【取消】，关闭提示，取消结束服务操作，继续客户服务；如果柜外清状态为正常，执行以下步骤：\n        （1）获取当前业务电子凭证归档批次号；\n        （2）执行后续步骤：“生成电子凭证”、并推送“客户签名”、“归档电子凭证”；\n注意：本次客户如办理多笔业务且存在电子凭证，电子凭证及附件影像按按一笔业务共用一个归档影像批次号，即一笔业务流水下的附件影像与本笔业务下的所有电子凭证为同一个归档影像批次号；\n如果一笔业务存在多笔关键交易流水，该笔业务的电子凭证为多笔且可以与具体交易流水关联，则需要将电子凭证与交易流水关联，如果后续冲正、抹账需要作废原业务凭证，可通过关联关系作废该冲正交易的原凭证。\n     2）存在纸质打印：执行“凭证打印”。\n3、本次基版需求的设计：如果当前交易是电子凭证，客户想要打印，则可进入“统一补打”交易打印，交易中需要打印的凭证可通过配置进行配置，不再每次询问客户。",
+      "业务步骤": "S1：柜员点击结束服务按钮，弹出确认是否结束服务的弹出框；\nS2：确认结束服务，如果存在电子凭证，则：业务凭证，可通过关联关系作废该冲正交易的原凭证。\n       1）校验柜外清状态；\n       2）执行电子凭证后续流程（\"生成电子凭证\"、“归档电子凭证”）；\nS3：如果存在纸质凭证待打印，则执行“凭证打印”。",
+      "服务术语": "",
+      "关键指引": [],
+      "收取物料": [],
+      "交付物料": [],
+      "凭证": []
+    },
+    {
+      "id": 33,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 34,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 35,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 36,
+      "type": "subProcess",
+      "name": "凭证打印",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 37,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 38,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 39,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 40,
+      "type": "subProcess",
+      "name": "凭证打印",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 41,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 42,
+      "type": "subProcess",
+      "name": "生成电子凭证",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 43,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 44,
+      "type": "subProcess",
+      "name": "数据预留",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 45,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 46,
+      "type": "subProcess",
+      "name": "扫描&影像采集",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 47,
+      "type": "subProcess",
+      "name": "业务联动",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 48,
+      "type": "subProcess",
+      "name": "重空打印",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 49,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 50,
+      "type": "subProcess",
+      "name": "冠字号采集",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 51,
+      "type": "subProcess",
+      "name": "业务提交",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 52,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 53,
+      "type": "transaction",
+      "name": "复核授权",
+      "cellType": "subProcess",
+      "channels": [],
+      "dataIn": [],
+      "dataOut": []
+    },
+    {
+      "id": 54,
+      "type": "subProcess",
+      "name": "业务信息确认",
+      "channels": [
+        "柜面"
+      ],
+      "rules": [],
+      "formRules": [],
+      "dataIn": [],
+      "dataOut": [],
+      "节点分类": "操作节点",
+      "节点展示形式": "页面型",
+      "重入类型": "恢复重入",
+      "业务概述": "客户对业务信息进行确认",
+      "业务规则": "1、在交易办理过程根据交易属性配置判断或交易预设节点确定是否需要客户确认业务要素信息或确认电子协议，如果需要，获取交易需推送的业务要素内容或电子协议，组装成柜外清所需文件推送至柜外清；\n2、柜外清展示对应的业务要素内容或电子协议，客户确认后，系统进入交易流程下一流程节点；\n3、客户通过柜外清确认时，柜员端在最后一个交易页面弹出提示框（提示客户正在确认）；\n4、柜员可中断当前客户确认动作，或柜外清可返回超时，或客户可以取消/拒绝，中断/超时/取消/拒绝后，交易停留至当前页面或当前节点（最后一个交易页面）。",
+      "业务步骤": "S1：推送需客户确认的业务要素内容、协议信息到柜外清；\nS2：客户通过柜外清查看后，点击确认；\nS3：系统收到客户确认动作后，进入交易流程下一流程节点；如果客户取消/拒绝，则关闭柜员端提示，停留在交易最后一个页面。",
+      "服务术语": "",
+      "关键指引": [],
+      "收取物料": [],
+      "交付物料": [],
+      "凭证": []
+    }
+  ],
+  "channels": [
+    "柜面"
+  ],
+  "edge": [
+    {
+      "source": 0,
+      "target": 54,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 31,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 32,
+      "target": 37,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 33,
+      "target": 44,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 34,
+      "target": -1,
+      "condition": "不需要补扫描",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"不需要补扫描\"}]"
+    },
+    {
+      "source": 34,
+      "target": 31,
+      "condition": "需要补扫描",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"需要补扫描\"}]"
+    },
+    {
+      "source": 35,
+      "target": 34,
+      "condition": "无纸质凭证",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"无纸质凭证\"}]"
+    },
+    {
+      "source": 35,
+      "target": 36,
+      "condition": "存在打印凭证",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"存在打印凭证\"}]"
+    },
+    {
+      "source": 36,
+      "target": 34,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 37,
+      "target": 35,
+      "condition": "无电子凭证",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"无电子凭证\"}]"
+    },
+    {
+      "source": 37,
+      "target": 42,
+      "condition": "存在电子凭证",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"存在电子凭证\"}]"
+    },
+    {
+      "source": 38,
+      "target": 45,
+      "condition": "不需要补扫描",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"不需要补扫描\"}]"
+    },
+    {
+      "source": 38,
+      "target": 46,
+      "condition": "需要补扫描（重空或凭证）",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"需要补扫描（重空或凭证）\"}]"
+    },
+    {
+      "source": 39,
+      "target": 38,
+      "condition": "无特殊凭证需要提前打印",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"无特殊凭证需要提前打印\"}]"
+    },
+    {
+      "source": 39,
+      "target": 40,
+      "condition": "特殊凭证需要提前打印",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"特殊凭证需要提前打印\"}]"
+    },
+    {
+      "source": 40,
+      "target": 38,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 41,
+      "target": 39,
+      "condition": "交易不存在重空打印",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"交易不存在重空打印\"}]"
+    },
+    {
+      "source": 41,
+      "target": 48,
+      "condition": "交易存在重空打印",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"交易存在重空打印\"}]"
+    },
+    {
+      "source": 42,
+      "target": 35,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 43,
+      "target": -1,
+      "condition": "不结束服务，继续其他交易",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"不结束服务，继续其他交易\"}]"
+    },
+    {
+      "source": 43,
+      "target": 32,
+      "condition": "结束服务",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"结束服务\"}]"
+    },
+    {
+      "source": 44,
+      "target": 47,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 45,
+      "target": 33,
+      "condition": "非现金类交易",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"非现金类交易\"}]"
+    },
+    {
+      "source": 45,
+      "target": 50,
+      "condition": "现金类交易",
+      "conditionTree": "[{\"l\":\"\",\"m\":\"\",\"r\":\"现金类交易\"}]"
+    },
+    {
+      "source": 46,
+      "target": 45,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 47,
+      "target": 43,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 48,
+      "target": 39,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 49,
+      "target": -1,
+      "condition": "业务提交结果 != 成功",
+      "conditionTree": "[{\"l\":\"业务提交结果\",\"m\":\"!=\",\"r\":\"成功\"}]",
+      "points": "[{\"x\":755,\"y\":300},{\"x\":1980,\"y\":300}]"
+    },
+    {
+      "source": 49,
+      "target": 41,
+      "condition": "业务提交结果 = 成功",
+      "conditionTree": "[{\"l\":\"业务提交结果\",\"m\":\"=\",\"r\":\"成功\"}]"
+    },
+    {
+      "source": 50,
+      "target": 33,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 51,
+      "target": 49,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 52,
+      "target": -1,
+      "condition": "复核结果 = 不通过 || 授权结果 = 不通过",
+      "conditionTree": "[{\"l\":\"复核结果\",\"m\":\"=\",\"r\":\"不通过\"},\"||\",{\"l\":\"授权结果\",\"m\":\"=\",\"r\":\"不通过\"}]",
+      "points": "[{\"x\":505,\"y\":250},{\"x\":1980,\"y\":250}]"
+    },
+    {
+      "source": 52,
+      "target": 51,
+      "condition": "复核结果 != 不通过 && 授权结果 != 不通过",
+      "conditionTree": "[{\"l\":\"复核结果\",\"m\":\"!=\",\"r\":\"不通过\"},\"&&\",{\"l\":\"授权结果\",\"m\":\"!=\",\"r\":\"不通过\"}]"
+    },
+    {
+      "source": 53,
+      "target": 52,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 54,
+      "target": 53,
+      "condition": "",
+      "conditionTree": "[]"
+    }
+  ],
+  "style": [
+    {
+      "id": 0,
+      "geometry": {
+        "x": 110,
+        "y": 312,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": -1,
+      "geometry": {
+        "x": 1955,
+        "y": 307,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": 31,
+      "geometry": {
+        "x": 1850,
+        "y": 607,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 32,
+      "geometry": {
+        "x": 1500,
+        "y": 372.0000000000001,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 33,
+      "geometry": {
+        "x": 1180,
+        "y": 707.0000000000001,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 34,
+      "geometry": {
+        "x": 1879.999518072289,
+        "y": 532,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 35,
+      "geometry": {
+        "x": 1770,
+        "y": 452,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 36,
+      "geometry": {
+        "x": 1750,
+        "y": 527.0009638554218,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 37,
+      "geometry": {
+        "x": 1645,
+        "y": 377.0000000000001,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 38,
+      "geometry": {
+        "x": 960,
+        "y": 542,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 39,
+      "geometry": {
+        "x": 850,
+        "y": 462,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 40,
+      "geometry": {
+        "x": 815,
+        "y": 537,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 41,
+      "geometry": {
+        "x": 740,
+        "y": 387,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 42,
+      "geometry": {
+        "x": 1620,
+        "y": 447,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 43,
+      "geometry": {
+        "x": 1535,
+        "y": 317,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 44,
+      "geometry": {
+        "x": 1250,
+        "y": 312,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 45,
+      "geometry": {
+        "x": 1070,
+        "y": 632,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 46,
+      "geometry": {
+        "x": 925,
+        "y": 627,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 47,
+      "geometry": {
+        "x": 1390,
+        "y": 312,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 48,
+      "geometry": {
+        "x": 710,
+        "y": 457,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 49,
+      "geometry": {
+        "x": 740,
+        "y": 317,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 50,
+      "geometry": {
+        "x": 1035,
+        "y": 702,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 51,
+      "geometry": {
+        "x": 600,
+        "y": 317,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 52,
+      "geometry": {
+        "x": 490,
+        "y": 322,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 53,
+      "geometry": {
+        "x": 350,
+        "y": 317,
+        "width": 110,
+        "height": 40
+      }
+    },
+    {
+      "id": 54,
+      "geometry": {
+        "x": 210,
+        "y": 317,
+        "width": 100,
+        "height": 40
+      }
+    }
+  ]
+}

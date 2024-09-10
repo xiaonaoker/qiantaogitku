@@ -1,0 +1,123 @@
+{
+  "name": "利率浮动信息",
+  "description": "显示产品基准利率，可设置浮动利率，回显浮动百分比及执行利率",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "是否计息",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "是-1"
+          },
+          {
+            "label": "否-2"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "利率类型",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "基准利率",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "行内利率",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "layoutData": 2,
+      "component": "input",
+      "data": {
+        "label": "优惠值",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "浮动类型",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "浮动百分点-1"
+          },
+          {
+            "label": "浮动百分比-2"
+          },
+          {
+            "label": "固定利率值-3"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "浮动利率",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "浮动值",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "执行利率",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    }
+  ]
+}

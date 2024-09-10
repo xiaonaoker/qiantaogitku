@@ -1,0 +1,185 @@
+{
+  "name": "PAD端获取授权任务",
+  "children": [
+    {
+      "type": "widget",
+      "component": "label",
+      "data": {
+        "label": "|授权任务表",
+        "modelData": "",
+        "fontSize": 13,
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "color": "#00B0F0",
+        "padding": 0,
+        "margin": 0,
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {}
+    },
+    {
+      "type": "container",
+      "component": "table",
+      "data": {
+        "label": "表格",
+        "modelData": "",
+        "row": 3,
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "业务类型",
+            "titleAlign": "center",
+            "modelData": "",
+            "inputLimit": "echo",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果授权任务数＞0，则回显授权信息，否则隐藏。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "业务名称",
+            "titleAlign": "center",
+            "modelData": "",
+            "inputLimit": "echo",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果授权任务数＞0，则回显授权信息，否则隐藏。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "授权原因",
+            "titleAlign": "center",
+            "modelData": "",
+            "inputLimit": "echo",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果授权任务数＞0，则回显授权信息，否则隐藏。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "授权任务状态",
+            "titleAlign": "center",
+            "modelData": "",
+            "inputLimit": "echo",
+            "childComponents": [
+              {
+                "type": "text",
+                "label": ""
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "如果授权任务数＞0，则回显授权信息（待授权/锁定），否则隐藏。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "table-column",
+          "data": {
+            "label": "操作",
+            "titleAlign": "center",
+            "modelData": "",
+            "inputLimit": "",
+            "childComponents": [
+              {
+                "type": "button",
+                "label": "授权"
+              }
+            ],
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、如果授权任务状态为“待授权”，则展示该按钮，且可操作；\r\n2、如果授权任务状态为“锁定”，则隐藏该按钮；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，进入PAD授权页面。",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "初始化": [
+      {
+        "name": "在代办任务中，点击“授权任务”按钮，则展示授权任务表。",
+        "type": "自定义规则"
+      }
+    ]
+  },
+  "description": ""
+}

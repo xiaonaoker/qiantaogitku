@@ -1,0 +1,162 @@
+{
+  "name": "登录",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "用户",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {}
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "输入框",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {}
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "输入框",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {}
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "输入框",
+        "modelData": "",
+        "inputLimit": "",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "min": 0,
+        "max": 0,
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {}
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "按钮",
+                "modelData": "",
+                "type": "text",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "按钮",
+                "modelData": "",
+                "type": "text",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

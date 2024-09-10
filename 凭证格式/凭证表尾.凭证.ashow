@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <Setting>
+    <是否无纸化/>
+    <输出条件/>
+    <凭证类型>A5(148*210)</凭证类型>
+    <是否打印电子印章/>
+    <电子印章类型/>
+    <备注/>
+  </Setting>
+  <Content>
+    <LabelInput id="LabelInput3" name="经办柜员" printType="打印字样且内容" rule="" Width="49" Height="5" Left="6" Top="27"/>
+    <LabelInput id="LabelInput4" name="复核柜员" printType="打印字样且内容" rule="" Width="49" Height="5" Left="63" Top="27"/>
+    <LabelInput id="LabelInput5" name="授权柜员" printType="打印字样且内容" rule="" Width="49" Height="5" Left="121" Top="27"/>
+    <Label id="Label1" name="银行签章" printType="打印字样且内容" rule="" Width="30" Height="5" Left="33" Top="46"/>
+    <Label id="Label2" name="客户签名" printType="打印字样且内容" rule="" Width="30" Height="5" Left="89" Top="46"/>
+  </Content>
+</Root>

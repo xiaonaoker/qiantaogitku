@@ -1,0 +1,802 @@
+{
+  "name": "交易结果-业务联动",
+  "children": [
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "交易名称",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": "展示格式：【交易码】交易名称"
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "交易结果信息",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、回显交易交易（带着交易名称交易码，交易流水）；\r\n2、注意此处的流水为全量流水。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "示例：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "【900010】个人开户已完成",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "示例：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "交易流水：TD0000042020230214112515556",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "业务清单",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "回显本次业务提交的交易明细。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "示例：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "您已完成以下业务",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "container",
+                  "component": "table",
+                  "data": {
+                    "label": "表格",
+                    "modelData": "",
+                    "row": 1,
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "widget",
+                      "component": "table-column",
+                      "data": {
+                        "label": "交易流水",
+                        "titleAlign": "left",
+                        "modelData": "",
+                        "inputLimit": "",
+                        "childComponents": [
+                          {
+                            "type": "text",
+                            "label": "15556"
+                          }
+                        ],
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {
+                        "初始化": [
+                          {
+                            "name": "1、回显本次业务提交的交易流水；\r\n2、此处流水仅显示交易流水（不需要显示全量流水）。",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "widget",
+                      "component": "table-column",
+                      "data": {
+                        "label": "交易名称",
+                        "titleAlign": "left",
+                        "modelData": "",
+                        "inputLimit": "",
+                        "childComponents": [
+                          {
+                            "type": "text",
+                            "label": "个人开户"
+                          }
+                        ],
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {
+                        "初始化": [
+                          {
+                            "name": "回显本次业务提交的交易名称。",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "推荐交易",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、展示推荐交易和热门交易；\r\n2、推荐建议根据每个交易配置，热门交易也是配置的，但是对客交易是统一的。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "示例：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "你还可以继续交易：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、根据每个交易配置，一般不超过5个；\r\n2、点击其中的交易名称，即可跳转进入对应的交易。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "【900007】个人存款；【900013】综合签约",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#00B0F0",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "示例：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "热门交易：",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、通过配置，但是对客交易统一的；\r\n2、点击其中的交易名称，即可跳转进入对应的交易。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "【900008】个人现金取款",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#00B0F0",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                },
+                {
+                  "type": "container",
+                  "component": "button-group",
+                  "data": {
+                    "label": "组",
+                    "modelData": "",
+                    "width": "100%",
+                    "align": "center",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "widget",
+                      "component": "button",
+                      "data": {
+                        "label": "退出",
+                        "modelData": "",
+                        "type": "primary",
+                        "size": "normal",
+                        "padding": 0,
+                        "margin": 0,
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {
+                        "初始化": [
+                          {
+                            "name": "该按钮一直处于可操作状态；",
+                            "type": "自定义规则"
+                          }
+                        ],
+                        "点击后": [
+                          {
+                            "name": "点击该按钮，退出交易。",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

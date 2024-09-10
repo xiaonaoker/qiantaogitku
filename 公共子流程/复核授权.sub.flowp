@@ -1,0 +1,242 @@
+{
+  "node": [
+    {
+      "id": 13,
+      "type": "subProcess",
+      "name": "远程授权",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": [
+        "授权信息:授权原因",
+        "授权信息:授权要点",
+        "授权信息:授权申请时间",
+        "柜员信息-授权柜员信息:柜员所属机构号",
+        "柜员信息-授权柜员信息:柜员所属机构名称",
+        "授权信息:授权柜员等级",
+        "授权信息:授权交易要素",
+        "授权信息:扫描附件清单",
+        "机构信息:机构号",
+        "柜员信息:柜员号"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 8,
+      "type": "transaction",
+      "name": "异机复核",
+      "cellType": "subProcess",
+      "channels": [],
+      "dataIn": [],
+      "dataOut": []
+    },
+    {
+      "id": 0,
+      "type": "start",
+      "name": "开始",
+      "ruleDesc": ""
+    },
+    {
+      "id": -1,
+      "type": "end",
+      "name": "结束",
+      "ruleDesc": ""
+    },
+    {
+      "id": 2,
+      "type": "subProcess",
+      "name": "同机复核",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    },
+    {
+      "id": 4,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 5,
+      "type": "gateway",
+      "name": "网关",
+      "ruleDesc": ""
+    },
+    {
+      "id": 6,
+      "type": "subProcess",
+      "name": "本地授权",
+      "nodeLib": true,
+      "lockEdit": true,
+      "dataIn": []
+    }
+  ],
+  "channels": [
+    "柜面"
+  ],
+  "edge": [
+    {
+      "source": 0,
+      "target": 12,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 4,
+      "target": -1,
+      "condition": "复核结果 = 不通过",
+      "conditionTree": "[{\"l\":\"复核结果\",\"m\":\"=\",\"r\":\"不通过\"}]"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "condition": "复核结果 != 不通过",
+      "conditionTree": "[{\"l\":\"复核结果\",\"m\":\"!=\",\"r\":\"不通过\"}]"
+    },
+    {
+      "source": 5,
+      "target": -1,
+      "condition": "是否授权 = 否",
+      "conditionTree": "[{\"l\":\"是否授权\",\"m\":\"=\",\"r\":\"否\"}]"
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "condition": "是否授权 = 是 && 授权模式 = 本地授权",
+      "conditionTree": "[{\"l\":\"是否授权\",\"m\":\"=\",\"r\":\"是\"},\"&&\",{\"l\":\"授权模式\",\"m\":\"=\",\"r\":\"本地授权\"}]",
+      "points": "[{\"x\":665,\"y\":210}]"
+    },
+    {
+      "source": 5,
+      "target": 13,
+      "condition": "是否授权 = 是 && 授权模式 = 远程授权",
+      "conditionTree": "[{\"l\":\"是否授权\",\"m\":\"=\",\"r\":\"是\"},\"&&\",{\"l\":\"授权模式\",\"m\":\"=\",\"r\":\"远程授权\"}]",
+      "points": "[{\"x\":665,\"y\":320}]"
+    },
+    {
+      "source": 6,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    },
+    {
+      "source": 12,
+      "target": 2,
+      "condition": "是否复核 = 是 && 复核模式 = 同机复核",
+      "conditionTree": "[{\"l\":\"是否复核\",\"m\":\"=\",\"r\":\"是\"},\"&&\",{\"l\":\"复核模式\",\"m\":\"=\",\"r\":\"同机复核\"}]",
+      "points": "[{\"x\":125,\"y\":200}]"
+    },
+    {
+      "source": 12,
+      "target": 5,
+      "condition": "是否复核 = 否",
+      "conditionTree": "[{\"l\":\"是否复核\",\"m\":\"=\",\"r\":\"否\"}]"
+    },
+    {
+      "source": 12,
+      "target": 8,
+      "condition": "是否复核 = 是 && 复核模式 = 异机复核",
+      "conditionTree": "[{\"l\":\"是否复核\",\"m\":\"=\",\"r\":\"是\"},\"&&\",{\"l\":\"复核模式\",\"m\":\"=\",\"r\":\"异机复核\"}]",
+      "points": "[{\"x\":125,\"y\":330}]"
+    },
+    {
+      "source": 13,
+      "target": -1,
+      "condition": "",
+      "conditionTree": ""
+    }
+  ],
+  "style": [
+    {
+      "id": 13,
+      "geometry": {
+        "x": 900,
+        "y": 310,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 12,
+      "geometry": {
+        "x": 110,
+        "y": 250,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 8,
+      "geometry": {
+        "x": 345,
+        "y": 310,
+        "width": 110,
+        "height": 40
+      }
+    },
+    {
+      "id": 0,
+      "geometry": {
+        "x": 30,
+        "y": 240,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": -1,
+      "geometry": {
+        "x": 1100,
+        "y": 240,
+        "width": 50,
+        "height": 50
+      }
+    },
+    {
+      "id": 2,
+      "geometry": {
+        "x": 345,
+        "y": 190,
+        "width": 100,
+        "height": 40
+      }
+    },
+    {
+      "id": 4,
+      "geometry": {
+        "x": 510,
+        "y": 250,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 5,
+      "geometry": {
+        "x": 650,
+        "y": 250,
+        "width": 30,
+        "height": 30
+      }
+    },
+    {
+      "id": 6,
+      "geometry": {
+        "x": 900,
+        "y": 190,
+        "width": 100,
+        "height": 40
+      }
+    }
+  ]
+}

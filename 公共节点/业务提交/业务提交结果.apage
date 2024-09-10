@@ -1,0 +1,577 @@
+{
+  "name": "业务提交结果",
+  "children": [
+    {
+      "type": "container",
+      "component": "dialog",
+      "data": {
+        "label": "提交失败弹出框",
+        "titleAlign": "left",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "提交结果为失败时，在业务办理最后一个页面上弹出提交失败弹出框（提示信息可根据客户需求客户化）。",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": [
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "！错误",
+            "modelData": "",
+            "fontSize": 17,
+            "bold": true,
+            "italic": false,
+            "underline": false,
+            "color": "#C00000",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "错误提示信息 ",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": true,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、回显后台返回的提交失败原因；\r\n2、注意展示信息要面向柜员具有可读性。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "button-group",
+          "data": {
+            "label": "组",
+            "modelData": "",
+            "width": "100%",
+            "align": "right",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "确定",
+                "modelData": "",
+                "type": "primary",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "该按钮一直处于可操作状态；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "点击后": [
+                  {
+                    "name": "点击该按钮，关闭提交失败弹出框，停留在当前页面或关闭交易（需要根据客户的具体要求选择是停留在当前页面还是关闭交易）。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "dialog",
+      "data": {
+        "label": "提交超时弹出框",
+        "titleAlign": "left",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "1、提交结果为超时时，在业务办理最后一个页面上弹出提交超时弹出框；\r\n1、超时查证的处理（选择哪种方式，可根据客户需求客户化）：\r\n     方式1：超时时手动点击“超时查证”进行超时查证（基版需求为此种方式）；\r\n     方式2：超时时自动触发1次超时查证。",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": [
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "！错误",
+            "modelData": "",
+            "fontSize": 17,
+            "bold": true,
+            "italic": false,
+            "underline": false,
+            "color": "#C00000",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "|异常信息",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#0B0B0B",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "input",
+                  "data": {
+                    "label": "输入框",
+                    "modelData": "",
+                    "inputLimit": "echo",
+                    "showLabel": false,
+                    "labelAlign": "right",
+                    "row": 1,
+                    "placeholder": "",
+                    "max": 0,
+                    "contentType": "text",
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、回显后台返回的提交异常原因；\r\n2、注意展示信息要面向柜员具有可读性。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "|详细信息",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#0B0B0B",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "input",
+                  "data": {
+                    "label": "输入框",
+                    "modelData": "",
+                    "inputLimit": "echo",
+                    "showLabel": false,
+                    "labelAlign": "right",
+                    "row": 1,
+                    "placeholder": "",
+                    "max": 0,
+                    "contentType": "text",
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、回显后台返回的提交异常原因；\r\n2、注意展示信息要面向运维人员具有可读性。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "|处理指引",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#0B0B0B",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "input",
+                  "data": {
+                    "label": "输入框",
+                    "modelData": "",
+                    "inputLimit": "echo",
+                    "showLabel": false,
+                    "labelAlign": "right",
+                    "row": 1,
+                    "placeholder": "",
+                    "max": 0,
+                    "contentType": "text",
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {
+                    "初始化": [
+                      {
+                        "name": "1、展示异常信息后续处理帮助信息(比如：请点击超时查证按钮，进行交易超时后查证。）；\r\n2、注意展示信息要面向柜员具有可读性。",
+                        "type": "自定义规则"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "button-group",
+          "data": {
+            "label": "组",
+            "modelData": "",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "超时查证",
+                "modelData": "",
+                "type": "primary",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "该按钮一直处于可操作状态；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "点击后": [
+                  {
+                    "name": "执行超时查证，同时关闭提交超时弹出框：\r\n1、超时查证返回结果为成功，则弹出提示框001（信息提示框，提示，按钮【确定】，“交易成功，继续当前交易操作。”，选择【确定】，关闭提示，继续当前交易下一交易流程节点。）；\r\n2、超时查证返回结果为失败，则提示后台返回的错误信息，提示确认后按照正常交易流程执行下一交易流程节点；\r\n3、超时查证返回超时，则弹出提示框002（信息确认框，提醒类，提示，按钮【是】【否】，“当前交易结果未知，是否重新查证或关闭当前交易？”，选择【重新查证】：关闭提示，重新执行超时查证；选择【关闭当前交易】：关闭提示，交易状态为超时，退出当前交易。）。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "取消",
+                "modelData": "",
+                "type": "primary",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "该按钮一直处于可操作状态；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "点击后": [
+                  {
+                    "name": "执行超时查证，同时关闭提交超时弹出框，关闭提交失败弹出框，退出交易。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

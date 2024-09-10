@@ -1,0 +1,538 @@
+{
+  "name": "阅读协议-客户端",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "33%",
+            "align": "right",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": []
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "33%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "仔细阅读并确认协议内容",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#000000",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "33%",
+            "align": "right",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "label",
+              "data": {
+                "label": "10S",
+                "modelData": "",
+                "fontSize": 13,
+                "bold": true,
+                "italic": false,
+                "underline": false,
+                "color": "#C00000",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、推送至柜外清后开始倒计时；\r\n2、根据配置表确认从多少S开始倒计时；\r\n3、倒计时为0后，“阅读”",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "",
+        "modelData": "",
+        "level": "medium",
+        "padding": 0,
+        "margin": 0,
+        "width": "100%",
+        "align": "left",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "row",
+          "data": {
+            "label": "行",
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "center",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "widget",
+                  "component": "label",
+                  "data": {
+                    "label": "协议内容",
+                    "modelData": "",
+                    "fontSize": 13,
+                    "bold": true,
+                    "italic": false,
+                    "underline": false,
+                    "color": "#000000",
+                    "padding": 0,
+                    "margin": 0,
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {}
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            },
+            {
+              "type": "container",
+              "component": "col",
+              "data": {
+                "label": "列",
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "已阅读并同意",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "25%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、签议不需要签名时，展示该按钮，否则隐藏；\r\n2、如果协议不是必读的且不要求必须拉到底，则该按钮一直处于可操作状态，否则：\r\n   1）如果协议的“是否必须拉到底”属性为是，则滑块必须在最下方，该按钮才可用；\r\n   2）如果设计了最少阅读时间，倒计时必须为0时，该按钮才可用；\r\n   3）如果1）、2）两项都需要，则两项都完成以后，该按钮才可用。",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，结束当前协议确认：\r\n1）如果还有其他需要确认的协议，则自动进入下一个协议阅读，并将结果同步至柜员端；\r\n2）否则结束协议阅读，并将结果返回柜员端。",
+                "type": "自定义规则"
+              }
+            ]
+          },
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "阅读同意并签名",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "25%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、签议需要签名时，展示该按钮，否则隐藏；\r\n2、如果协议不是必读的且不要求必须拉到底，则该按钮一直处于可操作状态，否则：\r\n   1）如果协议的“是否必须拉到底”属性为是，则滑块必须在最下方，该按钮才可用；\r\n   2）如果设计了最少阅读时间，倒计时必须为0时，该按钮才可用；\r\n   3）如果1）、2）两项都需要，则两项都完成以后，该按钮才可用。",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，弹出签名窗口，请客户签名。\r\n1）如果还有其他需要确认的协议，则自动进入下一个协议阅读，并将结果同步至柜员端；\r\n2）否则结束协议阅读，并将结果返回柜员端。",
+                "type": "自定义规则"
+              }
+            ]
+          },
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "取消",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "25%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态；",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，则客户终端协议阅读和签名，柜外清协议内容关闭，柜员端也返回到协议确认前的页面。",
+                "type": "自定义规则"
+              }
+            ]
+          },
+          "children": null
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "dialog",
+              "data": {
+                "label": "请在框内签名",
+                "titleAlign": "center",
+                "width": "100%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "group",
+                  "data": {
+                    "label": "",
+                    "modelData": "",
+                    "level": "medium",
+                    "padding": 0,
+                    "margin": 0,
+                    "width": "100%",
+                    "align": "left",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "row",
+                      "data": {
+                        "label": "行",
+                        "width": "100%",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "container",
+                          "component": "col",
+                          "data": {
+                            "label": "列",
+                            "width": "100%",
+                            "align": "left",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": []
+                        },
+                        {
+                          "type": "container",
+                          "component": "col",
+                          "data": {
+                            "label": "列",
+                            "width": "100%",
+                            "align": "center",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": [
+                            {
+                              "type": "widget",
+                              "component": "label",
+                              "data": {
+                                "label": "签名区域",
+                                "modelData": "",
+                                "fontSize": 13,
+                                "bold": true,
+                                "italic": true,
+                                "underline": false,
+                                "color": "#000000",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {}
+                            }
+                          ]
+                        },
+                        {
+                          "type": "container",
+                          "component": "col",
+                          "data": {
+                            "label": "列",
+                            "width": "100%",
+                            "align": "left",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "button-group",
+                  "data": {
+                    "label": "组",
+                    "modelData": "",
+                    "width": "100%",
+                    "align": "center",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "widget",
+                      "component": "button",
+                      "data": {
+                        "label": "取消",
+                        "modelData": "",
+                        "type": "text",
+                        "size": "normal",
+                        "padding": 0,
+                        "margin": 0,
+                        "accompany": "",
+                        "custom": "",
+                        "width": "25%"
+                      },
+                      "rules": {
+                        "点击后": [
+                          {
+                            "name": "点击关闭弹框",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "widget",
+                      "component": "button",
+                      "data": {
+                        "label": "重签",
+                        "modelData": "",
+                        "type": "primary",
+                        "size": "normal",
+                        "padding": 0,
+                        "margin": 0,
+                        "accompany": "",
+                        "custom": "",
+                        "width": "25%"
+                      },
+                      "rules": {
+                        "点击后": [
+                          {
+                            "name": "点击清空字迹",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "widget",
+                      "component": "button",
+                      "data": {
+                        "label": "确定",
+                        "modelData": "",
+                        "type": "primary",
+                        "size": "normal",
+                        "padding": 0,
+                        "margin": 0,
+                        "accompany": "",
+                        "custom": "",
+                        "width": "25%"
+                      },
+                      "rules": {
+                        "点击后": [
+                          {
+                            "name": "点击将签名字迹推送到柜员端，并结束当前协议阅读：\r\n1）如果还有其他需要确认的协议，则自动进入下一个协议阅读，并将结果同步至柜员端；\r\n2）否则结束协议阅读，并将结果返回柜员端。",
+                            "type": "自定义规则"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "rules": {}
+}

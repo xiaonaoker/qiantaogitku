@@ -1,0 +1,15 @@
+{
+  "公共组件/办理人": {
+    "component": "banliren"
+  },
+  "公共组件/我是一个目录/办理事项": {
+    "component": "banlishixiang"
+  },
+  "通用业务/对公业务分组/对公开户/对公开户/对公开户": {
+    "component": "duigongkaihu"
+  },
+
+  "通用业务/对公业务分组/对公开户/eee/eee": {
+    "component": ""
+  }
+}

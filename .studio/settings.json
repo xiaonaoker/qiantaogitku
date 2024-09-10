@@ -1,0 +1,9 @@
+{
+  "projectType": "abat",
+  "projectName": "嵌套git库",
+  "public": false,
+  "dependencies": [],
+  "optionDependencies": "嵌套git库_配置",
+  "projectGroup": "柜面",
+  "projectGroupEn": "guimian"
+}

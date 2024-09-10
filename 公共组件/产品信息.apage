@@ -1,0 +1,246 @@
+{
+  "name": "产品信息",
+  "description": "显示产品编号、产品名称等产品关键信息",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账号",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "户名",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户属性",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "账户种类",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "通存标志",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "开户机构通存-1"
+          },
+          {
+            "label": "分行通存-2"
+          },
+          {
+            "label": "全行通存-3"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "通兑标志",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "开户机构通兑-1"
+          },
+          {
+            "label": "分行通兑-2"
+          },
+          {
+            "label": "全行通兑-3"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "产品名称",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "存期",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "起存日期",
+        "required": false,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "date",
+      "data": {
+        "label": "到期日期",
+        "required": false,
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "金额",
+        "required": true,
+        "placeholder": "",
+        "contentType": "number",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "利率",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "是否自动扣款",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "是-1"
+          },
+          {
+            "label": "否-2"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "自动扣款帐户",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "计息标志",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "周期按季付息-1"
+          },
+          {
+            "label": "周期按月付息-2"
+          },
+          {
+            "label": "周期按半年付息-3"
+          },
+          {
+            "label": "周期按年付息-4"
+          },
+          {
+            "label": "按月付息-5"
+          },
+          {
+            "label": "按季付息-6"
+          },
+          {
+            "label": "按半年付息-7"
+          },
+          {
+            "label": "按年付息-8"
+          },
+          {
+            "label": "到期付息-9"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "转存方式",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "不转存-1"
+          },
+          {
+            "label": "本金续存-2"
+          },
+          {
+            "label": "本息续存-3"
+          },
+          {
+            "label": "转入其它账号-4"
+          }
+        ],
+        "width": "50%"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "揽存人信息",
+  "description": "录入揽存人工号及揽存人姓名",
+  "children": [
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "揽存人工号",
+        "required": false,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "揽存人所属机构",
+        "required": false,
+        "placeholder": "",
+        "options": [],
+        "width": "50%"
+      }
+    }
+  ]
+}

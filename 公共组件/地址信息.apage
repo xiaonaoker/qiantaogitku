@@ -1,0 +1,62 @@
+{
+  "name": "地址信息",
+  "description": "联动选择国家、省、市、区、县信息，并录入详细地址信息",
+  "children": [
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "省",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "根据地区表展示-1"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "市",
+        "required": true,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "根据地区表展示-1"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "select",
+      "data": {
+        "label": "区（县）",
+        "required": false,
+        "placeholder": "",
+        "options": [
+          {
+            "label": "根据地区表展示-1"
+          }
+        ],
+        "width": "50%"
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "详细地址",
+        "required": true,
+        "placeholder": "",
+        "contentType": "text",
+        "width": "50%"
+      }
+    }
+  ]
+}

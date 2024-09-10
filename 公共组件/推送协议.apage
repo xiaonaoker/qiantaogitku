@@ -1,0 +1,395 @@
+{
+  "name": "推送协议",
+  "children": [
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "柜员端",
+        "modelData": "",
+        "level": "medium",
+        "accompany": "",
+        "width": "100%"
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "协议1",
+            "modelData": "",
+            "accompany": "",
+            "custom": "协议名称",
+            "width": "33.33%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、如果有多个协议，则展示多个协议名称，如果协议名称太长，展示名称中的前10个字符，其余的以……表示\r\n2、客户在确认第一个协议时，此处选中第一个协议名称；客户在确认第二个协议时，此处选中第二个协议名称；以此类推……",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "协议2",
+            "modelData": "",
+            "accompany": "",
+            "width": "33.33%"
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "协议3",
+            "modelData": "",
+            "accompany": "",
+            "width": "33.33%"
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "image",
+          "data": {
+            "label": "协议内容",
+            "src": "",
+            "alt": "协议内容",
+            "width": "100%",
+            "height": "100",
+            "accompany": "1、回显协议内容 2、柜员看到的协议和客户看到的协议是一致的，比如：客户在确认第一个协议，那么柜员也只能看第一个协议"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、回显协议内容\r\n2、柜员看到的协议和客户看到的协议是一致的，比如：客户在确认第一个协议，那么柜员也只能看第一个协议",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "中断协议确认",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "1、在客户未全部将协议阅读完之前显示，客户全部将协议确认完后，此按钮消失",
+            "width": "25%"
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "1、如果有多个协议，点击后提示：（信息提示框   警告类  警告  按钮【是】【否】 ）：“共X个协议，客户已确认X个，是否继续中断”。点击是柜外清不再显示协议确认的页面，柜员端也返回到协议确认前的页面。点击否，交易继续\r\n\r\n2、如果有一个协议，点击后提示：（信息提示框   警告类  警告  按钮【是】【否】 ）：“客户正在阅读协议，是否中断”。点击是柜外清不再显示协议确认的页面，柜员端也返回到协议确认前的页面。点击否，交易继续\r\n",
+                "type": "自定义规则"
+              }
+            ],
+            "初始化": [
+              {
+                "name": "在客户未全部将协议阅读完之前显示，客户全部将协议确认完后，此按钮消失",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "重签",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "回显客户签名后显示，点击清空签名，柜外清提示客户签字",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "签名合规",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "回显客户签名后显示，点击后柜外清显示下一个需要确认的协议，如果没有需要确认的协议，则完成协议推送",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "用户签字",
+            "modelData": "",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {}
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "客户端",
+        "modelData": "",
+        "level": "medium",
+        "accompany": "",
+        "width": "100%"
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "仔细阅读并确认协议内容",
+            "modelData": "",
+            "accompany": "",
+            "width": "50%"
+          },
+          "rules": {},
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "倒计时:",
+            "modelData": "",
+            "accompany": "1、推送至柜外清后开始倒计时  2、根据配置表确认从多少S开始倒计时",
+            "width": "50%"
+          },
+          "rules": [],
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "image",
+          "data": {
+            "label": "协议内容",
+            "src": "",
+            "alt": "协议内容",
+            "width": "100%",
+            "height": "100",
+            "accompany": "协议内容"
+          },
+          "rules": {},
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "checkbox",
+          "data": {
+            "label": "本人以阅读并同意签署上述相关协议内容",
+            "modelData": "",
+            "inputLimit": "",
+            "value": "false",
+            "accompany": "1、提示内容为：本人已阅读并同意签署上述相关协议内容 2、默认不选中 3、在倒计时或滑块滑到底后可勾选",
+            "width": "100%"
+          },
+          "rules": {},
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "",
+            "modelData": "",
+            "accompany": "占位",
+            "width": "50%"
+          },
+          "rules": {},
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "不同意",
+            "modelData": "",
+            "type": "text",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、“阅读并同意”和“阅读并签字”按钮同意只能展示一个，签议不需要签字时，展示“阅读并同意”按钮，签议需要签字时，展示“阅读并签字”按钮\r\n2、如果协议不是必读的，按钮没有置灰，展示协议后就是可用的\r\n3、如果协议的“是否必须拉到底”属性为是，此滑块必须在最下方，“阅读并同意”或“阅读并签字”才可用\r\n4、如果设计了最少阅读时间，倒计时必须为0；“阅读并同意”或“阅读并签字”才可用\r\n5、如果4、5两项都需要，则两项都完成以后，“阅读并同意”或“阅读并签字”才可用",
+                "type": "自定义规则"
+              }
+            ]
+          },
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "阅读并同意",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、“阅读并同意”和“阅读并签字”按钮同意只能展示一个，签议不需要签字时，展示“阅读并同意”按钮，签议需要签字时，展示“阅读并签字”按钮\r\n2、如果协议不是必读的，按钮没有置灰，展示协议后就是可用的\r\n3、如果协议的“是否必须拉到底”属性为是，此滑块必须在最下方，“阅读并同意”或“阅读并签字”才可用\r\n4、如果设计了最少阅读时间，倒计时必须为0；“阅读并同意”或“阅读并签字”才可用\r\n5、如果4、5两项都需要，则两项都完成以后，“阅读并同意”或“阅读并签字”才可用",
+                "type": "自定义规则"
+              }
+            ]
+          },
+          "children": null
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "阅读并签字",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "",
+            "width": "33.33%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "1、“阅读并同意”和“阅读并签字”按钮同意只能展示一个，签议不需要签字时，展示“阅读并同意”按钮，签议需要签字时，展示“阅读并签字”按钮\r\n2、如果协议不是必读的，按钮没有置灰，展示协议后就是可用的\r\n3、如果协议的“是否必须拉到底”属性为是，此滑块必须在最下方，“阅读并同意”或“阅读并签字”才可用\r\n4、如果设计了最少阅读时间，倒计时必须为0；“阅读并同意”或“阅读并签字”才可用\r\n5、如果4、5两项都需要，则两项都完成以后，“阅读并同意”或“阅读并签字”才可用",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "group",
+      "data": {
+        "label": "客户端-签名弹窗",
+        "modelData": "",
+        "level": "medium",
+        "accompany": "",
+        "width": "100%"
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "label",
+          "data": {
+            "label": "请在框内签字",
+            "modelData": "",
+            "accompany": "",
+            "width": "100%"
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "image",
+          "data": {
+            "label": "签字框",
+            "src": "",
+            "alt": "签字框",
+            "width": "100%",
+            "height": "100",
+            "accompany": ""
+          },
+          "rules": {}
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "确定",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "点击将签名字迹推送到柜员端",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "重签",
+            "modelData": "",
+            "type": "primary",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "点击清空字迹",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "取消",
+            "modelData": "",
+            "type": "text",
+            "accompany": "",
+            "width": "25%"
+          },
+          "rules": {
+            "点击后": [
+              {
+                "name": "点击关闭弹框",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "description": "该组件可将业务办理中需要确认或需要签字的协议或相关文件推送到柜外清供客户确认或签字",
+  "rules": {
+    "初始化": [
+      {
+        "name": "1、初始化：检测柜外清，如果柜外清状态异常，提示（信息提示框   警告类  警告  按钮【是】【否】 ）用户：“柜外清状态异常，请检查设备及设备连接。是否转为纸质打印？”，如果选择是，转纸质打印；如果选择否，继续检测柜外清状态，异常继续提示；柜外清状态异常\r\n2、如果协议需要留档，全部阅读完成后将协议留存",
+        "type": "自定义规则"
+      }
+    ]
+  }
+}

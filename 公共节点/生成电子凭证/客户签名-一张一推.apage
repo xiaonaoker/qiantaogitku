@@ -1,0 +1,1864 @@
+{
+  "name": "客户签名-一张一推",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "20%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "group",
+              "data": {
+                "label": "凭证列表",
+                "modelData": "",
+                "level": "medium",
+                "padding": 0,
+                "margin": 0,
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、如果是结束服务时，则获取客户临柜所有业务的电子凭证，并以树形结构展示业务名称和凭证名称；\r\n2、如果是统一补打，则获取当前业务下需要生成电子凭证但还未生成的电子凭证名称，并以树形结构展示业务名称及凭证名称；\r\n3、树形结构的一级目录为电子凭证所对应的业务；二级目录为电子凭证名称；\r\n4、当该凭证未电子化，凭证名称字体为绿色；当凭证正在电子化，凭证名称为蓝色；当该凭证已经电子化，则凭证名称字体为灰色（不可被点击)；\r\n5、默认选择第一个未电子化凭证名称，并触发凭证名称点击事件；\r\n6、点击凭证名称：\r\n     1）未生成电子凭证的将该凭证内容（带格式）展示在“当前电子凭证预览”域；\r\n     2）如本次电子凭证已生成，点击后“当前电子凭证预览”域展示合成客户签名、电子印章的的电子凭证。",
+                    "type": "自定义规则"
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人开户",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户信息维护凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "开户凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "签约协议",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#DED7D7",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人存款",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#00B0F0",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人存款凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#00B0F0",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人转账",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#00B050",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人转账凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#00B050",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "20%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "80%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "80%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "container",
+              "component": "group",
+              "data": {
+                "label": "当前电子凭证预览",
+                "modelData": "",
+                "level": "medium",
+                "padding": 0,
+                "margin": 0,
+                "width": "100%",
+                "align": "left",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {},
+              "children": [
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "凭证内容（个人存款示例）",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {
+                            "初始化": [
+                              {
+                                "name": "1、显示凭证列表所选择的凭证内容（带格式）；\r\n2、如果是签名前，则仅展示凭证内容（带格式），如果是签名并返回后，则增加展示客户签名轨迹；如果是已经合成电子凭证。",
+                                "type": "自定义规则"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "个人存款",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "交易日期：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "交易时间：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "机构代码：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "柜员号：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "交易流水：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户号：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户名称：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "证件类型：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "证件号码：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "账号：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "账户名称：",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "50%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "50%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户签名：___________",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {
+                            "初始化": [
+                              {
+                                "name": "客户签名并成功返回后，则回显客户签名影像。",
+                                "type": "自定义规则"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "component": "row",
+                  "data": {
+                    "label": "行",
+                    "width": "100%",
+                    "accompany": "",
+                    "custom": ""
+                  },
+                  "rules": {},
+                  "children": [
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "提示信息（示例）",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {
+                            "初始化": [
+                              {
+                                "name": "1、根据不同凭证及客户是否签名，提示不同信息以及“客户签名后，请确认是否清晰、正确；如不清晰或不正确，请重新签名。”；\r\n2、签名前，提示当前电子凭证名称；\r\n3、签名后，提示“请确认客户签名是否正常”。",
+                                "type": "自定义规则"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户签名前",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        },
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "当前凭证：个人存款凭证",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户签名后",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": false,
+                            "italic": true,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        },
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "请确认客户签名是否正常",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#000000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "100%",
+                        "align": "center",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "widget",
+                          "component": "label",
+                          "data": {
+                            "label": "客户签名后，请确认是否清晰、准确；如不清晰或不准确，请重新签名",
+                            "modelData": "",
+                            "fontSize": 13,
+                            "bold": true,
+                            "italic": false,
+                            "underline": false,
+                            "color": "#C00000",
+                            "padding": 0,
+                            "margin": 0,
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {}
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "",
+                        "width": "33%",
+                        "align": "right",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": []
+                    },
+                    {
+                      "type": "container",
+                      "component": "col",
+                      "data": {
+                        "label": "列",
+                        "width": "100%",
+                        "align": "left",
+                        "accompany": "",
+                        "custom": ""
+                      },
+                      "rules": {},
+                      "children": [
+                        {
+                          "type": "container",
+                          "component": "button-group",
+                          "data": {
+                            "label": "组",
+                            "modelData": "",
+                            "width": "100%",
+                            "align": "center",
+                            "accompany": "",
+                            "custom": ""
+                          },
+                          "rules": {},
+                          "children": [
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "客户签名",
+                                "modelData": "",
+                                "type": "primary",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "推送客户签名前展示该按钮，否则隐藏；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮：\r\n1）将选中的凭证内容推送柜外清，请客户确认签名，同时柜员端该按钮置灰，“提示信息”域展示“客户正在签名，请等待！”；\r\n2）客户签名并成功返回后，该按钮隐藏，“凭证内容”域展示凭证内容以及客户签名轨迹，“重签”按钮可见可操作；如果没有其他未推送电子凭证，“下一凭证”按钮隐藏，“确定”按钮可见；否则“下一凭证”按钮可见，“确定”按钮隐藏；\r\n3）客户签名超时，“提示信息”域展示“客户签名超时，请重新进行客户签名”，柜员端该按钮可操作，“下一凭证/确定”按钮隐藏；如果客户签名已失败三次，则提示001（信息确认框，警告类，提示，按钮【是】【否】，“签名失败，是否打印纸质凭证？”，选择【是】：关闭提示，将该凭证转纸质凭证，进入凭证打印的打印列表；选择【否】：关闭提示，再次推送柜外清请客户签名。）。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "下一凭证",
+                                "modelData": "",
+                                "type": "primary",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "当客户签名轨迹返回后，如果凭证列表中还有其他未电子化凭证，该按钮可见，否则隐藏；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮：\r\n1）将当前预览的凭证内容、客户签名轨迹、电子印章合成电子凭证，并将电子凭证归档影像平台；\r\n2）如果本笔业务的所有电子凭证未有影像批次号，向影像平台获取影像批次号，并于将该影像批次号与本业务所有电子凭证进行关联，即一笔业务所有电子凭证、业务附件影像归属一个影像批次号；\r\n3）焦点默认进入下一个未电子化的凭证名称，并触发凭证名称点击事件，页面进入“签名前”状态。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "确定",
+                                "modelData": "",
+                                "type": "primary",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "当客户签名轨迹返回后，如果凭证列表中已无其他未电子化凭证，该按钮可见，否则隐藏；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮：\r\n1）将当前预览的凭证内容、客户签名轨迹、电子印章合成电子凭证，并将电子凭证提交影像平台；\r\n2）如果本笔业务的所有电子凭证未有影像批次号，向影像平台获取影像批次号，并于将该影像批次号与本业务所有电子凭证进行关联，即一笔业务所有电子凭证、业务附件影像归属一个影像批次号；\r\n3）交易继续下一节点。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "重签",
+                                "modelData": "",
+                                "type": "primary",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "当客户签名轨迹返回后，展示该按钮，否则隐藏；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮：\r\n1）将凭证内容推送到柜外清，该按钮置灰，及“下一凭证/确定”按钮均置灰，“提示信息”域展示“客户正在签名，请等待！”；\r\n2）客户签名并成功返回，凭证内容中展示凭证内容以及客户签名轨迹，该按钮置为可操作；如果没有其他未推送电子凭证，“下一凭证”按钮隐藏，“确定”按钮可见；否则“下一凭证”按钮可见，“确定”按钮隐藏；\r\n3）客户签名超时，“提示信息”域展示“客户签名超时，请重新进行客户签名”，柜员端该按钮可操作，“下一凭证/确定”按钮隐藏；如果客户签名已失败三次，则提示001（信息确认框，警告类，提示，按钮【是】【否】，“签名失败，是否打印纸质凭证？”，选择【是】：关闭提示，将该凭证转纸质凭证，进入凭证打印的打印列表；选择【否】：关闭提示，再次推送柜外清请客户签名。）。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "widget",
+                              "component": "button",
+                              "data": {
+                                "label": "退出",
+                                "modelData": "",
+                                "type": "text",
+                                "size": "normal",
+                                "padding": 0,
+                                "margin": 0,
+                                "accompany": "",
+                                "custom": ""
+                              },
+                              "rules": {
+                                "初始化": [
+                                  {
+                                    "name": "该按钮一直处于可操作状态；",
+                                    "type": "自定义规则"
+                                  }
+                                ],
+                                "点击后": [
+                                  {
+                                    "name": "点击该按钮：\r\n1）如果所有电子凭证都已生成则退回退出当前交易；\r\n2）如果存在电子凭证未生成，则提示002（信息确认框，警告类，提示，按钮【是】【否】，“电子凭证还未完全完成，是否退出凭证电子化（后续可通过统一补打补电子凭证）？”，选择【是】：关闭提示，退出当前交易；选择【否】：关闭提示，停留在当前页面。）。",
+                                    "type": "自定义规则"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}

@@ -1,0 +1,755 @@
+{
+  "name": "账户识别-账户",
+  "children": [
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "radio",
+              "data": {
+                "label": "卡/折",
+                "modelData": "",
+                "inputLimit": "",
+                "value": "true",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": "",
+                "width": "50%"
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、如果入数据为账户获取，则默认选中该值；\r\n2、如果入数据（获取方式）为空，默认选中该值",
+                    "type": "自定义规则"
+                  }
+                ],
+                "焦点离开": [
+                  {
+                    "name": "选中该值时，且“是否选择子账户=是”，则默认展示“账号、子账户序号”，隐藏“证件类型、证件号码、客户名称、账户列表”；",
+                    "type": "自定义规则"
+                  },
+                  {
+                    "name": "选中该值时，且“是否选择子账户=否”，则默认展示“账号”，隐藏“证件类型、证件号码、客户名称、账户列表”；",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "widget",
+              "component": "radio",
+              "data": {
+                "label": "证件",
+                "modelData": "",
+                "inputLimit": "",
+                "value": "false",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": "",
+                "width": "50%"
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "1、如果入数据为证件获取，则默认选中该值，否则不选中",
+                    "type": "自定义规则"
+                  }
+                ],
+                "焦点离开": [
+                  {
+                    "name": "选中该值时，则默认展示“证件类型、证件号码、客户名称、账户列表”，隐藏“账号、子账户序号”；",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "row",
+      "data": {
+        "label": "行",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "input",
+              "data": {
+                "label": "账号",
+                "modelData": "",
+                "inputLimit": "required",
+                "showLabel": true,
+                "labelAlign": "right",
+                "row": 1,
+                "placeholder": "",
+                "max": "",
+                "contentType": "text",
+                "padding": 0,
+                "margin": 0,
+                "width": "100%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "如果入数据的账号不为空则回显在该域，可修改，否则该域默认为空",
+                    "type": "自定义规则"
+                  }
+                ],
+                "焦点进入": [
+                  {
+                    "name": " 1、初始焦点落在该域，且该域为空，则：\r\n     1）如果支持的凭证读取方式包含读IC卡或刷磁条，则自动弹出“读取账户（弹出框）”；\r\n     2）如果支持的凭证读取方式只有手工输入，则焦点停留在该域；\r\n 2、否则，焦点落在该域，按空格键，则\r\n     1）如果支持的凭证读取方式包含读IC卡或刷磁条，则弹出“读取账户（弹出框）”；\r\n     2）如果支持的凭证读取方式只有手工输入，则给出提示（校验错误提示，“该账号只支持手工输入！”）；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "焦点离开": [
+                  {
+                    "name": "1）如果账号为空，则给出提示（校验错误提示，“账号不能为空！”），焦点仍停留在该域；\r\n2）否则：\r\n    1）如果账号与通过“读IC卡”或“刷磁条”后获取账号一致，则“获取账号方式”不更改；\r\n    2）否则如果账号与入数据的账号一致，且“获取账号方式”不为空，则“获取账号方式”不更改，否则“获取账号方式=手工录入”；\r\n    3）根据机读或录入的账号查询账户信息和客户信息并进行“账户校验”（详见公共规则“账户校验”）；校验成功后，如果“是否同步客户视图信息=是”，则将左侧客户视图选中的账户更改为该账户，如果客户视图中客户本人信息为空，则将客户信息；如果“是否同步客户视图信息=否”，则不更改客户视图信息。",
+                    "type": "自定义规则"
+                  },
+                  {
+                    "name": "账户信息是否存在",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "客户信息是否存在",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "证件信息有效性校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "卡证一致性校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "柜员办理自身亲属业务",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "客户号唯一性校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "对私客户信息完整性校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "对私客户税收居民信息完整性校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户名单校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "客户名单校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户类型校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "客户类型校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户分类校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户属性校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户状态校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "凭证状态校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户通兑校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "账户通存校验",
+                    "type": "公共规则"
+                  },
+                  {
+                    "name": "交易密码是否锁定校验",
+                    "type": "公共规则"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "col",
+          "data": {
+            "label": "列",
+            "width": "50%",
+            "align": "left",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "select",
+              "data": {
+                "label": "子账户序号",
+                "modelData": "",
+                "inputLimit": "depends",
+                "showLabel": true,
+                "labelAlign": "right",
+                "placeholder": "",
+                "options": [
+                  {
+                    "label": "",
+                    "value": ""
+                  }
+                ],
+                "padding": 0,
+                "margin": 0,
+                "width": "100%",
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "如果入数据“是否选择子账户=否”，则该域隐藏；",
+                    "type": "自定义规则"
+                  },
+                  {
+                    "name": "如果入数据“是否选择子账户=是”，且满足入数据子账户条件的子账户为0，则弹出提示（确认提示框，警告类，提示，按钮【是】【否】，“没有满足条件的子账户，是否更换账户？”，选择【是】：关闭提示，根据支持的凭证读取方式弹出读取账户或焦点回到“账号”域；选择【否】：关闭提示，焦点回到“账号”域。）",
+                    "type": "自定义规则"
+                  },
+                  {
+                    "name": "如果入数据“是否选择子账户=是”，且满足入数据子账户条件的子账户≥1个，则该域下拉框选项为满足条件的子账户序号，默认回显其中的第一个子账户序号，按下空格键，弹出“子账户列表”；",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "客户名称",
+        "modelData": "客户名称",
+        "inputLimit": "echo",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "根据账号查询回显，不可修改",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": null
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "凭证种类",
+        "modelData": "客户名称",
+        "inputLimit": "echo",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "根据账号查询回显，不可修改",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "凭证号码",
+        "modelData": "客户名称",
+        "inputLimit": "echo",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "根据账号查询回显，不可修改",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账户等级",
+        "modelData": "客户名称",
+        "inputLimit": "echo",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "根据账号查询回显，不可修改",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "widget",
+      "component": "input",
+      "data": {
+        "label": "账户状态",
+        "modelData": "客户名称",
+        "inputLimit": "echo",
+        "showLabel": true,
+        "labelAlign": "right",
+        "row": 1,
+        "placeholder": "",
+        "max": "",
+        "contentType": "text",
+        "padding": 0,
+        "margin": 0,
+        "width": "50%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "根据账号查询回显，不可修改",
+            "type": "自定义规则"
+          }
+        ]
+      }
+    },
+    {
+      "type": "container",
+      "component": "button-group",
+      "data": {
+        "label": "按钮组",
+        "modelData": "",
+        "width": "100%",
+        "align": "center",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {},
+      "children": [
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "下一步",
+            "modelData": "",
+            "type": "primary",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "50%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮初始置灰，基础检查通过后（必输项等），该按钮处于可操作状态",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，交易继续",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "上一步",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "50%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "根据入数据选择是否有该按钮，如果有则展示，一直处于可操作状态，如果没有则隐藏",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，返回交易上一个节点",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        },
+        {
+          "type": "widget",
+          "component": "button",
+          "data": {
+            "label": "退出",
+            "modelData": "",
+            "type": "text",
+            "size": "normal",
+            "padding": 0,
+            "margin": 0,
+            "accompany": "",
+            "custom": "",
+            "width": "50%"
+          },
+          "rules": {
+            "初始化": [
+              {
+                "name": "该按钮一直处于可操作状态",
+                "type": "自定义规则"
+              }
+            ],
+            "点击后": [
+              {
+                "name": "点击该按钮，则提示（确认提示框，提示，按钮【是】【否】，“此操作将退出交易，请确认是否继续？”，选择【是】：关闭提示，退出交易；选择【否】：关闭提示，停留在当前页面。）",
+                "type": "自定义规则"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "component": "dialog",
+      "data": {
+        "label": "子账户列表",
+        "titleAlign": "left",
+        "width": "100%",
+        "accompany": "",
+        "custom": ""
+      },
+      "rules": {
+        "初始化": [
+          {
+            "name": "子账户序号域按下空格键，弹出“子账户列表”弹出框；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "根据账户信息和入数据子账户条件回显满足条件的子账户列表（只有一个也可展示）；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "每页最多展示10行，超过10行则换页（每页展示行数可配置）；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "默认选中第一行，左键单击可选中任一行（一次只能选择一行）；",
+            "type": "自定义规则"
+          },
+          {
+            "name": "左键双击任一行，关闭该弹出框，并将该选中的子账户序号回显在“子账户序号”域，焦点回到“子账户序号”域。",
+            "type": "自定义规则"
+          }
+        ]
+      },
+      "children": [
+        {
+          "type": "container",
+          "component": "table",
+          "data": {
+            "label": "表格",
+            "modelData": "",
+            "row": 3,
+            "padding": 0,
+            "margin": 0,
+            "width": "100%",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "子账户序号",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "产品名称",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "币种",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "存期",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            },
+            {
+              "type": "widget",
+              "component": "table-column",
+              "data": {
+                "label": "到期日期",
+                "titleAlign": "center",
+                "modelData": "",
+                "inputLimit": "",
+                "childComponents": [
+                  {
+                    "type": "text",
+                    "label": ""
+                  }
+                ],
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {}
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "component": "button-group",
+          "data": {
+            "label": "组",
+            "modelData": "",
+            "width": "100%",
+            "align": "center",
+            "accompany": "",
+            "custom": ""
+          },
+          "rules": {},
+          "children": [
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "确定",
+                "modelData": "",
+                "type": "primary",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "该按钮一直处于可操作状态；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "点击后": [
+                  {
+                    "name": "点击该按钮，关闭该弹出框，并将该选中的子账户序号回显在“子账户序号”域，焦点回到“子账户序号”域。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "widget",
+              "component": "button",
+              "data": {
+                "label": "取消",
+                "modelData": "",
+                "type": "text",
+                "size": "normal",
+                "padding": 0,
+                "margin": 0,
+                "accompany": "",
+                "custom": ""
+              },
+              "rules": {
+                "初始化": [
+                  {
+                    "name": "该按钮一直处于可操作状态；",
+                    "type": "自定义规则"
+                  }
+                ],
+                "点击后": [
+                  {
+                    "name": "点击该按钮，关闭该弹出框，焦点回到“子账户序号”域，不修改子账户序号域的选值。",
+                    "type": "自定义规则"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {},
+  "description": ""
+}
